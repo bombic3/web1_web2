@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> video p.20 </title>
+	<style>
+        video { width: 600px; }
+    </style>
+</head>
+<body>
+   <!-- 접근성 = 브라우저 화면에 들어오자마자 자동으로 재생되는 autoplay 속성을 쓰지 않는다. 써야할 때는 muted 음소거를 반드시 넣어줘야 함
+   src, controls 필수 속성
+   autoplay muted 필수 짝꿍
+   loop 반복재생
+   사이즈 주고 싶으면 단위없이 width="600" 하지만 html5에서는 css에 따로 씀
+   poster 속성을 이용해서 첫 시작의 화면을 스틸것으로 사용할 수 있다(썸네일지정)
+   -->
+    <video src="img/NIKE%20add.mp4" 
+    controls autoplay muted loop></video>
+    
+    <video src="img/NIKE%20add.mp4" 
+    controls poster="img/nike_poster.png"></video>
+    
+    <!-- mp4확장자 거의 다 되지만 안 될 때 속성값 source사용해서 src 넣어주고 type 넣어주기. 밑에는 예시 동영상은 확장자만 바꾸는 것이 아니라 인코딩을 다시 해야하는 문제이기때문에 우리의 영역 아님 -->
+    <video controls>
+        <source src="video/sample.mp4" type="video/mp4">
+        <source src="video/sample.ogv" type="video/ogv">
+        <source src="video/sample.webm" type="video/webm">
+        <p>이 브라우저는 video태그를 지원하지 않습니다.</p>
+    </video>
+    
+    <!-- preload 재생 버튼을 눌러 재생하기 전에 오디오 파일을 다운로드할지의 여부 -->
+    <audio src="img/in-loving-memory.mp3" controls loop preload="auto"></audio>
+</body>
+</html>

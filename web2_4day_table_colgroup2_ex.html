@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table - col,colgroup 태그 p.39 </title>
+	<style>
+        table { border-collapse: collapse; }
+        caption { text-align: right;}
+        th, td { 
+            padding: 10px; 
+            border: 1px solid gray; 
+            width: 100px; 
+            text-align: center; }
+        
+    </style>
+</head>
+<body>
+       <table>
+          <caption>spacilication values</caption>
+          <colgroup>
+              <col style="background: pink">
+              <col>
+              <col span="2" style="background: #ccc;">
+              <col>
+          </colgroup>
+           <!-- 실무에서 colgroup은 직접 코딩에 스타일을 주는 경우 많음 클래스명 주고 css에 따로 줘도 됨 -->
+          <thead>
+              <tr>
+                  <th rowspan="2">grade</th>
+                  <th rowspan="2">point</th>
+                  <th colspan="2">strengh</th>
+                  <th rowspan="2">percent</th>
+              </tr>
+              <tr>
+                  <td>kg/mm</td>
+                  <td>ib/in</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>hard</td>
+                  <td>0.45</td>
+                  <td>56.2</td>
+                  <td>80.000</td>
+                  <td>20</td>
+              </tr>
+              <tr>
+                  <td>midium</td>
+                  <td>0.45</td>
+                  <td>49.2</td>
+                  <td>70.000</td>
+                  <td>25</td>
+              </tr><tr>
+                  <td>soft</td>
+                  <td>0.45</td>
+                  <td>42.2</td>
+                  <td>60.000</td>
+                  <td>30</td>
+              </tr>
+          </tbody>
+       </table>
+</body>
+</html>

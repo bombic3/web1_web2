@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> form p.55, 59, 63  </title>
+	<style>
+        body {
+            line-height: 2;
+        }
+        textarea {
+            resize: none; vertical-align: text-top /* 이 두가지 reset 코드 */
+        }
+    </style>
+</head>
+<body>
+   <!--잘 알아두기 면접중요 핸드폰 사진 -->
+    <!-- form = 사용자가 웹 서버와 통신해서 데이터를 주고 받을 수 있는 html구조를 말함
+    action = 데이터를 전달 받을 서버 주소
+    name = 데이터의 값과 연결 혹은 분류를 나타냄
+    value = 서버로 전송되는 실제 값, 그냥 그 값이다
+    method="post" 정보여 보여지지 않는다 (개인정보 로그인 등등에 쓰임)
+    method="get" 주소창에 입력된 정보가 보여진다 
+    checked, selected 입력양식을 도와주는 체크표시
+    -->
+    <form action="#" method="post"><!-- action 서버주소를 넣는다-->
+        <h1>form관련요소</h1>
+        <fieldset>
+           <legend>필수정보</legend>
+            <!-- lable 접근성 = 데이터 연결부분으로 반드시 입력한다 -->
+            <label for="user_id">아이디</label>:<input type="text" id="user_id" placeholder="영문으로 입력하세요">
+            <label for="user_pw">비밀번호</label>: <input type="tpassword" id="user_pw" placeholder="영문과 숫자의 조합"><br>
+            <!-- 단일 선택 -->
+            성별: <label for="male">남자</label><input type="radio" id="male" name="gender" checked>
+            <!--name = 데이터의 값과 연결 혹은 분류를 나타냄, 같은그룹 동일하게 작성!
+                value = 서버로 전송되는 실제 값, 그냥 그 값이다
+                checked, selected 입력양식을 도와주는 체크표시 -->
+            <label for="female">여자</label> <input type="radio" id="female" name="gender">
+        </fieldset>
+        <br>
+        카드 <input type="radio">
+        <br>
+        <fieldset>
+            <!-- 다중 선택 -->
+            취미: 영화 감상 <input type="checkbox" name="hobby" value="movie">
+            음악 감상 <input type="checkbox" name="hobby" value="music" checked>
+            독서 <input type="checkbox" name="hobby" value="reading">
+            <br>
+
+            프로필사진 업로드 <input type="file">
+
+            <input type="url" value="http://">
+            <!-- value 반복되는 입력 양식을 작성해 둘 수 있다 
+            value 는 type별로 다른 역할을 하므로 주의가 필요하다 -->
+
+            사는지역
+            <select>
+                <option>서울</option>
+                <option selected>경기</option>
+                <option>제주</option>
+                <option>부산</option>
+            </select>
+            <br>
+            자기소개
+
+            <!-- 여러줄 입력 textarea 시작과 끝 태그 사이에 공백이 없도록 한다
+                cols="50" 가로 글자수
+                rows="10" 세로 글자수
+                영문기준 = 한글은 정확하지 않음
+                placeholder="100자 이내로" = 개발자가 제어해야한다, 속성으로 제어할 수 없음 (10자 정도만 가능) -->
+            <textarea cols="50" rows="10" placeholder="100자 이내로"></textarea>
+        </fieldset>
+        
+        
+        <!-- 버튼 = value 버튼의 이름
+            submit = 제출
+            reset = 초기화
+            button = 기능없음 개발자가 커스텀해야 하는 버튼.
+            기능주고 이름줘야 함 / 기능없음
+        -->
+        
+        <input type="submit" value="전송">
+        <input type="reset" value="취소"> <!-- 사용자의 접근성위해 실수로 눌러버림.. 잘 안 쓰는 추세-->
+        <input type="button" value="아이디 찾기">
+        
+        <!-- input type="button" 같은 역할을 하는 버튼 / 기능없음 -->
+        <button>전송</button>
+        <button>취소</button>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table  </title>
+	<style>
+        table { border-collapse: collapse; }
+        th,td { width: 200px; text-align: center; padding: 15px; border: 1px solid gray;}
+        thead { background: pink; }
+        tfoot { background: lightgrey;}
+        caption { text-align: right;}
+        
+    </style>
+</head>
+<body>
+  <!-- 스크린 리더기에게 구조적인 정보를 주어 보다 이해 하기 쉽도록 돕는다 -->
+   <table>
+      <caption>Monthly Savings</caption>
+       <thead>
+           <tr>
+               <th>Month</th>
+               <th>Savings</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td>January</td>
+               <td>$100</td>
+           </tr>
+           <tr>
+               <td>February</td>
+               <td>$80</td>
+           </tr>
+       </tbody>
+       <tfoot>
+           <tr>
+               <td>Sum</td>
+               <td>$180</td>
+           </tr>
+       </tfoot>
+   </table>
+</body>
+</html>

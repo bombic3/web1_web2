@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> direction </title>
+	<style>
+        @keyframes ani {
+            100% {left: 300px;}
+        }
+        
+        div {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 50%;
+            background: hotpink;
+            animation: ani 5s linear 3; /* 반복 3회 */
+        }
+        /* 순방향 끝나면 첫프레임 시작 */
+        .box1 { animation-direction: normal; }
+        /* 역방향 재생, 끝나면 마지막 프레임부터 다시 시작 */
+        .box2 { animation-direction: reverse; }
+        /* 순-역 번갈아 재생 */
+        .box3 { animation-direction: alternate; }
+        /* 역-순 번갈아 재생 */
+        .box4 { animation-direction: alternate-reverse; }
+    </style>
+</head>
+<body>
+    <div class="box1">normal</div>
+    <div class="box2">reverse</div>
+    <div class="box3">alternate</div>
+    <div class="box4">a-reverse</div>
+</body>
+</html>

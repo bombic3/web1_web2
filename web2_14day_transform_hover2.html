@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transform - hover2 </title>
+	<style>
+        .effect {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .effect img {
+            width: 100%;
+            vertical-align: top;
+            /* img 를 div로 감싸면 100%와 버티컬얼라인 top 필수*/
+        }
+        
+        .effect figcaption {
+            background: rgba(0,0,0,0.5);
+            width: 100%;
+            padding: 5px 15px;
+            box-sizing: border-box;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        
+        .effect .front,
+        .effect .back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s;/* all 생략 가능 */
+            backface-visibility: hidden;/* 돌아가면서 살짝씩 보이는 것 방지 대응 코드 */
+        }
+        
+        .effect .front {
+            transform: rotatey(0deg);
+        }
+        
+        .effect:hover .front {
+            transform: rotateY(180deg);
+        }
+        
+        .effect .back {
+            transform: rotateY(-180deg);
+        }
+        .effect:hover .back {
+            transform: rotateY(0deg);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="effect">
+        <figure class="front">
+            <img src="img/kpop_02.jpg" alt="">
+            <figcaption>
+                <h3>서태지</h3>
+                <p>신규앨범 소개글</p>
+            </figcaption>
+        </figure>
+        <figure class="back">
+            <img src="img/kpop_03.jpg" alt="">
+            <figcaption>
+                <h3>자이언티</h3>
+                <p>신규앨범 소개글</p>
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>

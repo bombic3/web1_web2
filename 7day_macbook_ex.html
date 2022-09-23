@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 실전예제 </title>
+		<style>
+			/* reset */
+			a { text-decoration: none; }
+			i { font-style: normal;}
+			h2 { padding: 0; margin: 0; } /* 원래 가진 여백을 초기화 */
+			
+			span, b, a, i { display: block; }
+			.wrap { width: 1300px; margin: 40px 100px; } /*상위폴더 계속 잡으면서 넣어야 유지보수 찾기 쉬움*/
+			.wrap span { color: red; font-size: 20px; margin-bottom: 10px; }
+			.wrap b { font-size: 22px; }
+			.wrap h2 { font-size: 50px; text-transform: capitalize; margin: 6px 0; } /* 첫 번째 문자 대문자로 바꿔주기*/
+			.wrap strong {font-size: 28px; }
+			.wrap img { width: 700px; }
+			.wrap .btn { background-color: deepskyblue; color: #fff; font-size: 16px; 
+			padding: 10px; width: 90px; text-align: center; border-radius: 22px;
+			margin: 15px 0;	}
+			.wrap .btn2 { font-size: 18px; color: deepskyblue; margin: 10px 0;}
+			.wrap i { color: #666; font-size: 15px; }
+			 
+			
+			/* 블럭요소 정렬*/
+			.wrap .txt,
+			.wrap .img	{ float: left;}
+			
+		</style>
+	</head>
+	<body>
+	<!--text-transform: capitalize; 단어의 첫 글자를 대문자로 변경 -->
+	<!-- h2위에 h3있거나 하면 안 됨-->
+	<!-- float: left; = 16강 -->
+		<div class="wrap">
+		
+			<div class="txt">
+				<span>New</span>
+				<b>13형 모델</b>
+				<h2>macbook pro</h2>
+				<strong>어떤 일이든. 어디에서든.</strong>
+				<a href="#" class="btn">가격보기</a>
+				<a href="#" class="btn2">더 알아보기 &gt; </a>
+				<i>출시일은 추후 공개됩니다.</i>
+			</div>
+			
+			<div class="img">
+				<img src="img/apple_macbook.jpg" alt="맥북프로이미지">
+			</div>
+		</div>
+	</body>
+</html>

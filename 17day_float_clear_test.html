@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> float해제 - clear p.124 </title>
+	<style>
+        .box_wrap { width: 400px; }
+        .box_parent { border: 2px dashed blue; padding: 10px; }
+        .box_parent:after {content: ''; display: block; clear: both; }
+        
+        .box { width: 100px; height: 100px; text-align: center; color: #fff; }
+        .box1 { background: pink; float: left; }
+        .box2 { background: skyblue; float: right; }
+	</style>
+</head>
+<body>
+   <!-- float clear방법
+       1. 부모에게 높이값을 준다 <유지보수 까다로움>
+       2. 부모에게 overflow:hidden; <작은 바디를 만들어주는 개념>
+                   <하지만 visible제외, 팝업이나 넘치는 요소가 있다면 안보일 수 있다>
+       3. 부모에게
+          :after
+           {content: ''; display: block; clear: both; }
+       -->
+    <div class="box_wrap">
+        <div class="box_parent">
+            <div class="box box1">box1</div>
+            <div class="box box2">box3</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> 단어 관련 속성 </title>
+	<style>
+        body {
+            padding: 30px;
+            background: #eee;
+            letter-spacing: -1px; /* 상속 가능 */
+            word-spacing: 10px; /* 상속 가능 */
+        }
+        .box { 
+            width: 50%;
+        font-size: 20px;
+        background: pink;
+        padding: inherit; 
+        margin : 20px;
+        box-sizing: border-box;
+        }
+        .eng {
+            width: 70px;
+            margin-bottom: 30px;
+            word-break: break-all; /* 기본값 = 영어 keep-all */
+        }
+    </style>
+</head>
+<body>
+    <div class="eng"> 
+        I will do my best. I will do my best. I will do my best.
+    </div>
+    <div class="box box1">
+        아이들과 시간을 보내면서 느낀점은 아이들의 순수함이 저에게 큰 귀감이 되고 즐거운 기억으로 남았어요.
+    </div>
+    <div class="box box2">
+        기부를 하기로 마음먹게 된 건, 한 광고를 통해서였어요 어린아이에게 조금이나마 도움이 되었으면 좋겠습니다.
+    </div>
+    <div class="box box3">
+        현재는 수익금의 일부만 기부하고 잇지만, 언젠가 모금을 통해 큰 금액이 모이게 되어 여러 아이들을 돕는 재단을 만들고 싶어요.
+    </div>
+</body>
+</html>

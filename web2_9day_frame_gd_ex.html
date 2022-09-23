@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> 이미지 액자 효과 연습많이 하기 </title>
+	<style>
+        .img_wrap {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .img_wrap img {
+            width: 100%;
+        }
+        .img_wrap:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border: 2px solid rgba(255,0,0,0.3);
+        }
+        p {
+            width: 500px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            background: gray;
+            color: #fff;
+            height: 40px;
+            line-height: 40px;
+            position: relative;
+            top: -14px;
+            box-sizing: border-box;
+            padding: 1px 5px 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img_wrap">
+        <img src="img/nike_poster.png" alt="나이키 광고 포스터">
+    </div>
+    <p>"정말 잘했어", "밀여붙여. 니가 승리를 원하는 것처럼.
+    네가 us 오픈 대회에서 뛰고 있는 것처럼</p>
+</body>
+</html>

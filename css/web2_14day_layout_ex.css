@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/* RESET */
+* { box-sizing: border-box; }
+body {
+    font-family: 'nbg', '맑은고딕', 'helveticaNenu', sans-serif;
+}
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.hide {
+    position: absolute;
+    left: -9999px;
+}
+
+/* gift_info */
+.gift_info {
+    width: 100%;
+    background: #f4f4f2;
+    padding: 40px 0 80px 0;
+}
+.gift_info .inner {
+    width: 96%;
+    margin: 0 auto;
+}
+.gift_info .inner .txt {
+    position: relative;
+    left: 100px;
+    line-height: 1.6; /* 상속 */
+}
+.gift_info .inner .txt a {
+    font-size: 14px;
+    color: #006633;
+    font-weight: bold;
+}
+.gift_info .inner .txt h3 {
+    font-size: 18px;
+    color: #222;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+.gift_info .inner .txt p {
+    font-size: 14px;
+    color: #444;
+}
+.gift_info .use {
+    margin-top: 50px;
+}
+.gift_info .use li {
+    position: relative;
+    float: left;
+    width: 24%;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+.gift_info .use li:last-child {
+    border: none;
+}
+
+.gift_info .use li dl {
+    width: 100%;
+    background: url(../img/icon_1_use1.png) no-repeat center top;
+    padding-top: 135px;
+}
+.gift_info .use li dl dt {
+    font-size: 14px;
+    color: #222;
+    font-weight: bold;
+}
+.gift_info .use li dl dd {
+    margin-top: 10px;
+    color: #777;
+    line-height: 1.6;
+}
+.gift_info .use li:nth-child(2) dl {
+    background-image: url(../img/icon_2_use1.png);
+}
+.gift_info .use li:nth-child(3) dl {
+    background-image: url(../img/icon_3_use1.png);
+}
+.gift_info .use li:nth-child(4) dl {
+    background-image: url(../img/icon_4_use1.png);
+}
+
+/* card */
+.card {
+    width: 100%;
+}
+.card ul {
+    width: 1100px;
+    margin: 0 auto;
+}
+.card ul li {
+    width: 33.333%;
+    float: left;
+    padding-left: 140px;
+    margin: 55px 0 100px 0;
+    position: relative;
+    border-right: 1px solid #ccc;
+}
+
+.card dl {
+    width: 100%;
+    padding: 0 10px;
+    
+}
+.card li:last-child {
+    border: none;
+}
+
+.card dl:before {
+    content: '';
+    display: block;
+    width: 116px;
+    height: 116px;
+    line-height: 1.4; /* 상속 */
+    margin-left: 20px;
+    background: url(../img/sc_buy_pic1%20.jpg) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.card dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+.card dt.green {
+    font-size: 14px;
+    font-weight: bold;
+    color: #006633;
+    margin-bottom: 28px;
+    padding-top: 10px;
+    
+}
+.card dd {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 18px;
+}
+.card .btn {
+    display: block;
+    width: 83px;
+    height: 28px;
+    margin-left: 10px;
+    border: 1px solid #222;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+}
+.card .btn_g {
+    background: #006633;
+    color: #fff;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

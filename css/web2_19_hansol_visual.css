@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+/* reset */
+body {
+    font-size: 15px;
+    line-height: 1;
+}
+.hide {
+    position: absolute;
+    left: -9999px;
+}
+.skip {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    transition: 0.5s;
+}
+.skip:focus { top: 0; }
+a { 
+    text-decoration: none; 
+    color: inherit;
+}
+ul,li { 
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+.clear:after {
+    content: '';
+    direction: block;
+    clear: both;
+}
+
+/* visual */
+.visual {
+    position: relative;
+    padding: 0 50px;
+}
+/* 이전 다음 btn */
+.visual .prev,
+.visual .next {
+    position: absolute;
+    top: 50%;
+    width: 25px; /* 포토샵에서 확인한 크기*/
+    height: 45px;
+    transform: translateY(-50%);
+    background: url(../img/sp_com.png) no-repeat;
+    color: transparent;
+}
+
+.visual .prev {
+    left: 83px; /* 90 */
+    background-position: -128px -61px;
+}
+.visual .next {
+    right: 83px; /* 90 */
+    background-position: -159px -61px;
+}
+
+
+
+
+
+.visual .control {
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    width: 100%;
+    text-align: center;
+}
+.visual .control > div {
+    display: inline-block;
+    position: relative;
+    padding-right: 45px;
+}
+/* play btn */
+.visual .control > div > div {
+    position: absolute;
+    right: 0;
+}
+.visual .control > div > div a {
+    display: inline-block;
+    width: 8px;
+    height: 9px;
+    overflow: hidden;
+    background: url(../img/sp_com.png) no-repeat;
+    opacity: 0.5;
+    margin-left: 7px;
+}
+
+.visual .control > div > div a.play {
+    background-position: -108px -72px;
+}
+.visual .control > div > div a.stop {
+    background-position: -108px -60px;
+}
+.visual .control > div > div a.on {
+    opacity: 1; 
+}
+
+.visual .control ul {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+.visual .control ul li {
+    display: inline-block;
+    padding: 0 3px; /* li에 inline-block 시켰을 때는 개행 약 4px 생기므로 그것 생각해서 패딩넣기*/
+    font-size: 1px; /* 글자를 읽히게 하기위해 사이즈 1줌 */
+    overflow: hidden; /* hidden으로 처리 */
+}
+.visual .control ul li.on a {
+    background: #fff;
+}
+.visual .control ul li a {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: rgba(255,255,255,0.5);
+}
+.visual .control a {
+    color: transparent; /* 글씨 안보이게 함 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.visual .content .slide-img {
+    height: 640px;
+    background: url(../img/bg_main03.jpg) no-repeat center;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1.6;
+}
+.visual .content .slide-img p {
+    font-size: 20px;
+    padding-top: 19px;
+}
+.visual .content .slide-img .txt {
+    position: absolute;
+    left: 550px;
+    top: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

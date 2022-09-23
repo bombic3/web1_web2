@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* RESET */
+a { text-decoration: none; color: inherit; }
+.hide { position: absolute; left: -9999px; }
+.clear:ater { content: ''; display: block; clear: both; }
+body { font-family: 'dotum', sans-serif;}
+
+/* BANNER */
+.banner { width: 100%; height: auto;
+    /*auto 의 의미 설명할 수 있어야 됨 이론시험*/
+    background: url(../img/hansol_bg_footer.jpg) no-repeat center top; }
+.banner ul { width: 1080px; margin: 0 auto; }
+.banner ul li { float: left; padding-left: 20px; width: 250px; }
+.banner ul li:first-child { padding-left: 0;}
+.banner ul li a { display: block; padding-top: 290px; height: 350px; font-size: 14px; color: #666; text-align: center; box-sizing: border-box; }
+.banner ul li a strong { display: block; font-size: 20px; color: #000; }
+.banner ul li:nth-child(1) a { background: url(../img/hansol_bg01.jpeg) no-repeat center/cover; }
+.banner ul li:nth-child(2) a { background: url(../img/hansol_bg02.jpeg) no-repeat center/cover; }
+.banner ul li:nth-child(3) a { background: url(../img/hansol_bg03.jpeg) no-repeat center/cover; }
+.banner ul li:nth-child(4) a { background: url(../img/hansol_bg04.jpeg) no-repeat center/cover; }
+
+/* footer */
+footer .top {background: #333; }
+
+footer .bottom { background: #444; }

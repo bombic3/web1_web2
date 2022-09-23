@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> display p.134 </title>
+	<style>
+        body > div { padding: 5px; border: 1px solid gray; text-align: center; }
+        .box { width: 100px; height: 100px; padding: 15px; background: pink; border: 1px solid gray; }
+        .none .box {display: none; }
+        .inline .box { display: inline; }
+        .block .box { display: block; }
+        .inline-block .box { display: inline-block; }
+	</style>
+</head>
+<body>
+    <!-- 스크린 리더기가 읽지 않는다. 공간도 사라진다 -->
+    <h1>display</h1>
+    <h2>none</h2>
+    <div class="none">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+    
+    <h2>inline</h2>
+    <!-- 인라인 요소의 padding/border/margin은 좌,우만 적용된다고 생각해야한다.
+        실제로 상,하에도 적용 된듯 보이나, 부모 요소의 박스에 반영되지 않기 때문,
+        즉 콘텐츠가 겹칠 수 있기 때문에 실무에서 잘 사용하지 않는다.
+        -->
+    <div class="inline">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+    </div>
+    
+    <h2>block</h2>
+    <div class="block">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+    
+    <h2>inline-block</h2>
+    <!-- 사이즈를 가지면서 인라인의 배치를 따른다.
+        인라인의 배치 - baseline, 약 4px로 한칸 띄어쓰기 인정(강제 개행) -->
+    <div class="inline-block">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+
+</body>
+</html>

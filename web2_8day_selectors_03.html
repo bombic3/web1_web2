@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> 상태 선택자  </title>
+	<style>
+        input:checked + span { color: hotpink;}
+        input:disabled + span { color: blue; }
+        input:enabled + span { color: green; }
+    </style>
+</head>
+<body>
+    <!-- :enabled 는 input 요소 중에서 사용할 수 있는 선택자를 말합니다. -->
+    <form>
+        <input type="checkbox" name="lecture" value="html" checked> 
+        <span>html</span>
+        <input type="checkbox" name="lecture" value="css">
+        <span>css</span>
+        <input type="checkbox" name="lecture" value="java" enabled>
+        <span>java</span>
+        <input type="checkbox" name="lecture" value="c++" disabled>
+        <span>c++</span>
+    </form>
+</body>
+</html>

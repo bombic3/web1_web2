@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> inline </title>
+	<style>
+        .parent { background: blue; padding: 1px;}
+        .child { width: 100px; height: 100px; padding: 10px; margin: 10px;
+        /*
+        border: 10px solid red;
+        */
+        background: pink;
+        /*인접한 블럭요소의 마진끼리 병합 돼서 위아래 마진 안보임
+          마진 병합 현상을 위한 대응 코드
+            padding: 1px; 부모에게 준다
+            border: 1px solid transparent; 보더값 투명
+            overflow: hidden;*/
+        /* display: inline; */ 
+        
+         border: 1px solid transparent;
+         overflow: hidden;}
+        .parent1 { background: red; }
+	</style>
+</head>
+<body>
+    <!-- 인라인요소 = 가로세로값을 적용할 수 없다. 부모요소가 함께 늘어나야 적용이 된 것이라 볼 수 있는데 부모요소에 영향을 주지 않으므로
+    실무에서는 좌/우의 값만 영향을 준다는 것을 기억하고 margin/ padding/ border 를 적용한다 -->
+    <div class="parent">
+        <div class="child">child</div>
+    </div>
+    <div class="parent1">
+        <div class="child1">child</div>
+    </div>
+</body>
+</html>

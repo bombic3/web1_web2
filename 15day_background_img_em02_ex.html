@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> p.174 백그라운드 이미지 ex02 </title>
+	<style>
+       /* reset */
+        a { color: inherit; text-decoration: none; }
+        body, h2, p, { padding: 0; margin: 0; }
+        
+        /* style */
+       
+        .wrap { margin: 0 auto;;
+                width: 1200px; height: 500px; line-height: 1.5;
+            
+            
+            /* 
+            background-color: black;
+            background-image: url(img/apple.png);
+            background-repeat: no-repeat;
+            background-position: left 80px center;
+            background-size: 330px;
+            */
+            
+            background: #000 url(img/apple.png) no-repeat left 80px center/330px;
+            
+            /* 축약형 사용시 순서대로! 
+                주위 할 점 
+                backgroud: 로 적기
+                position/size
+                /꼭 붙이고 포지션 값 적기 (사이즈랑 다르게 표현 위해) */
+            
+        }
+        .wrap .txt { width: 400px; margin: 140px; float: right; text-align: center; color: skyblue; }
+        .wrap .txt h2 { color: #fff; font-size: 30px; }
+        .wrap .txt p { font-size: 22px; line-height: 2; }
+        .wrap .txt a:hover { text-decoration: underline; }
+	</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="txt">
+            <h2>세 개의 링. 하나의 목표</h2>
+            <p>apple watch의 활동 링 채우는 방법</p>
+            <a href="#">살펴보기</a>
+        </div>
+    </div>
+</body>
+</html>

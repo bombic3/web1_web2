@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table - ex p.35 </title>
+	<style>
+        table { border-collapse: collapse; }
+        /* reset 코드 = 보더 겹치지 않고 한 줄로 표현 */
+        
+        th, td { border: 1px solid gray; padding: 20px; width: 200px;} 
+        thead { background: skyblue;}
+        tfoot { background: lightgray;}
+    </style>
+</head>
+<body>
+   <table>
+        <thead>
+            <tr>
+                <th>출장비 내역</th>
+                <th>금액</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>교통비</td>
+                <td>45000</td>
+            </tr>
+            <tr>
+                <td>식비</td>
+                <td>18000</td>
+            </tr>
+            <tr>
+                <td>숙박비</td>
+                <td>40000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총 합계</td>
+                <td>103000</td>
+            </tr>
+        </tfoot>
+   </table>
+</body>
+</html>

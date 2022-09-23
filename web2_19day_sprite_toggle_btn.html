@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> sprite - toggle btn </title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+        .hide { position: absolute; left: -9999px; }
+        ul, li { list-style: none; padding: 0; margin: 0; }
+        a { text-decoration: none; color: inherit; }
+        input[id="toggle"] { display: none; }
+        input + label {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 40px;
+            background: #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input + label span {
+            position: absolute;
+            width: 50%;
+            height: 5px;
+            border-radius: 30px;
+            background: #000;
+            transition: 0.3s;
+        }
+        input + label span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        input + label span:nth-child(3) {
+            bottom: 10px;
+        }
+        
+        
+        input:checked + label span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        input:checked + label span:nth-child(2) {
+            opacity: 0;
+        }
+        input:checked + label span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+        
+        .side {
+            width: 300px;
+            height: 100%;
+            background: #222;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            transition: 0.3s;
+        }
+        
+        input:checked ~ .side {
+            right: 0;
+        }
+        input:checked + label {
+            right: 300px;
+        }
+        
+        .side ul {
+            color: #fff;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin: 150px 0 0 45px;
+            
+        }
+        
+        
+        
+        
+        
+
+    </style>
+</head>
+<body>
+   <!-- position: absolute 스크롤 하면 같이 올라감, fixed뷰포트 고정 -->
+    <input type="checkbox" id="toggle">
+    <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav class="side"> <!-- <div>도 상관없음
+               주의 : checked를 활용해야 하기 대문에 + 인접형제 선택지 활용  -->
+        <h2 class="hide">side menu</h2>
+        <ul>
+            <li><a href="#">women</a></li>
+            <li><a href="#">man</a></li>
+            <li><a href="#">kids</a></li>
+            <li><a href="#">shoes&amp;bag</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

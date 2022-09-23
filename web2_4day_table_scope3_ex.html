@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table p.37 </title>
+	<style>
+        table { 
+            border-collapse: collapse;
+            width: 600px;
+        }
+        caption {
+            padding: 10px;
+        }
+        th, td { 
+            padding: 10px; 
+            border: 1px solid gray;  
+            text-align: center; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Superheros and sidekicks</caption>
+        <colgroup>
+            <col>
+            <col span="2" style="background: #c5cae9;">
+            <col span="2" style="background: #ffcdd2;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col">Batman</th>
+                <th scope="col">Robin</th>
+                <th scope="col">The Flash</th>
+                <th scope="col">Kid Flash</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Skill</th>
+                <td>Smarts</td>
+                <td>Dax. acrobat</td>
+                <td>Super speed</td>
+                <td>Super speed</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

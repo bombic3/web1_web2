@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> ipad </title>
+		<style>
+			/* reset */
+			a { text-decoration: none;}
+			* { padding: 0; margin: 0;}
+			
+			/* 세가지 값 : 위top 좌우both 아래bottom
+				네가지값 : top right bottom left (시계방향)
+				값 사이에 쉼표 없음 오직 띄어쓰기만 */
+			/* style */
+			.wrap { width: 1366px; height: 590px; padding: 142px 0 0; 
+			margin: 0 0 0 100px; } 
+			.wrap .txt { float: left; width: 326px; margin: 99px 0 0;  }
+			.wrap .txt h2 { font-size: 50px;}
+			.wrap .txt p { font-size: 28px; font-weight: bold; margin: 2px 0 30px; }
+			.wrap .txt a { color: #0071e3; }
+			.wrap .txt .btn { display: block; width: 100px; height: 40px; background-color: #0071e3; color: #fff;
+							text-align: center; line-height: 40px; border-radius: 40px;
+							margin: 20px 0;}
+							
+			.wrap img { width: 700px; }
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="txt">
+				<h2>iPad</h2>
+				<p>가장 인기 있는 iPad</p>
+				<b>\449,000부터</b>
+				<a href="#" class="btn">구입하기</a>
+				<a href="#">더 알아보기 &gt; </a>
+			</div>
+			<img src="img/ipad_01.jpg" alt="아이패드 사진" title="iPad">
+			<!-- img 는 인라인이라 위의 txt가 float:left; 이면 자동으로 옆으로 붙는다
+				img의 특성때문에 뒤로 안 가려짐-->
+		</div>
+	</body>
+</html>

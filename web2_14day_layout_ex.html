@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> layout - gift-card | starbucks </title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/web2_14day_layout_ex.css">
+    <link rel="icon" href="img/logo%20(2).png">
+</head>
+<body>
+   <!-- <section>태그 사용 시 제목태그 필수 -->
+    <section class="gift_info">
+        <h2 class="hide"> e-Gift Card </h2>
+        <article class="inner clear">
+            <div class="txt">
+                <h3>스타벅스<span>e-Gift Card</span> 사용방법</h3>
+                <p>스타벅스 e-Gift Card는 회원가입 없이도 즉시 사용할 수 있습니다<br>스타벅스 회원이라면 <a href="#">[카드등록]</a>후, 더욱 편리하게 사용하세요</p>
+            </div>
+            <ul class="use">
+                <li>
+                    <dl>
+                        <dt>휴대폰 MMS 제시</dt>
+                        <dd>수신하신 MMS를 제시하여 사용 가능</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>e-Mail 제시</dt>
+                        <dd>수신하신 e-Mail를 제시하여 사용 가능</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>실물 카드로 교환</dt>
+                        <dd>매장 내 보유하고 있는 스타벅스 실물 카드로 교환하여 사용 가능</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>홈페이지 카드 등록</dt>
+                        <dd>마이 스타벅스 리워드 회원의 경우, 
+                        계정에 카드 등록을 통해 사용 가능</dd>
+                    </dl>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section class="card">
+        <h2 class="hide">card사용법</h2>
+        <ul><!-- dl의 자식으로 a 넣으면 안 됨 형제로 나란히 넣기
+                   dl왼쪽으로 가상선택자 이용해서 이미지 넣는다고 a태그 버튼을 dl안으로 넣으면 유효성 검사에 오류 -->
+            <li>
+                <dl>
+                    <dt>카드 충전</dt>
+                    <dd>다양한 충전방법을 통해 간편하게 충전이 가능합니다.</dd>
+                </dl>
+                <a class="btn" href="#">바로가기</a>
+            </li>
+            <li>
+                <dl>
+                    <dt>카드 등록</dt>
+                    <dd>카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</dd>
+                </dl>
+                <a class="btn" href="#">바로가기</a>
+            </li>
+            <li>
+                <dl>
+                    <dt class="green">스타벅스 e-Gift Card<br>선물하기</dt>
+                    <dd></dd><!-- 유효성 검사 -->
+                </dl>
+                <a class="btn btn_g"href="#">바로가기</a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

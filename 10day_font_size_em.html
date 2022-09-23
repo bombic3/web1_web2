@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 상대단위 </title>
+	<style>
+		:root { font-size: 16px; }
+		 .box { background: hotpink; margin: 20px; color: #fff; display: inline-block; }
+		 .px { width: 160px; height: 160px; }
+		 body { font-size: 12px; }
+		 .em { width: 10em; height: 10em; }
+		 .rem { width: 10rem; height: 10rem; }
+		 .percent { width: 100%; height: 100%; } /*부모영역에서의 비율*/
+	</style>
+</head>
+<body>
+<!-- 접근성 지키기 위해 상대비율 씀 : font-size: 시각 불편한 분들을 위해 접근성 유지
+	단위 -
+	em = 상위 요소의 폰트 사이즈 배수 (상위요소에 따라 계속 바뀜)
+	rem = 최상위 요소(root)의 폰트 사이즈 배수 (루트의 기본 폰트 값은 16px)
+	percent = 부모영역에서의 비율
+	px = 고정비율-->
+	<div class="wrap">
+		<div class="px box">px</div>
+		<div class="em box">em</div>
+		<div class="rem box">rem</div>
+		<div class="percent box">percent</div>
+	</div>
+</body>
+</html>

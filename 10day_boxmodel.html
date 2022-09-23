@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> box-model </title>
+	<style>
+	/* reset */
+		p { padding: 0; margin: 0; }
+	/* style */
+		div { width: 500px; height: 200px; margin: 50px; padding: 30px; border: 5px solid gray; }
+		p { background: pink; }
+	</style>
+</head>
+<body>
+<!-- border: 사이즈 모양(스타일) 색상;
+		border: 5px solid gray; -->
+<!-- 태그를 배울 때는 초기화 코드의 여부를 잘 알고 있어야 한다
+		= reset 코드 먼저 작성을 잘 해두고 만드는 style을 넣는다-->
+	<div>
+		<p>box-model</p> <!-- 자신이 가진 여백이 있으므로 초기화 시켜주기 p { padding: 0; margin: 0; } -->
+	</div>
+</body>
+</html>

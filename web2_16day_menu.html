@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transition-menu </title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+        .clear:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .gnb {
+            background: #333;
+            padding-left: 40px;
+            color: #fff;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            widows: 1000px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .gnb > li {
+            float: left;
+            width: 240px;
+            letter-spacing: 2px;
+        }
+        .gnb ul {
+            position: absolute;
+            background: #666;
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+        /* position: absolute; 없으면 sub에 올려도 메뉴가 나타나는 대응코드 필요
+        1. pointer-events: none; 마우스 포인터의 이벤트 방어
+        2. position: absolute;
+        */
+        
+        .gnb > li:hover ul {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .gnb > li ul li {
+            width: 240px;
+            padding: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- <nav> ul 은 한번 감싸고 제목도 있어야 됨 유효성
+       li 안에 li 안됨 ul 한번 더 넣기-->
+        <ul class="gnb clear">
+            <li><a href="#">about us</a>
+                <ul>
+                    <li><a href="#">ceo</a></li>
+                    <li><a href="#">history</a></li>
+                    <li><a href="#">vision</a></li>
+                </ul>
+            </li>
+            <li><a href="#">works</a>
+                <ul>
+                    <li><a href="#">sub-menu</a></li>
+                    <li><a href="#">sub-menu</a></li>
+                    <li><a href="#">sub-menu</a></li>
+                </ul>
+            </li>
+            <li><a href="#">services</a>
+                <ul>
+                    <li><a href="#">sub-menu</a></li>
+                    <li><a href="#">sub-menu</a></li>
+                    <li><a href="#">sub-menu</a></li>
+                </ul>
+            </li>
+            <li><a href="#">location</a></li>
+        </ul>
+    <!--</nav>-->
+</body>
+</html>

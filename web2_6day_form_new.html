@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> form p.40  </title>
+	<style>
+        
+    </style>
+</head>
+<body>
+   <!-- autocomplete="on" 해놔도 밑에 따로 off 한 개 지정해 줄 수 있음-->
+    <form action="#" autocomplete="on"><!-- 창이 꺼졌을 시 자동입력창. autocomplete="off" 기본값 -->
+        <fieldset>
+            <legend>로그인</legend>
+            <input type="text" name="id" placeholder="아이디를 입력하세요">
+            <input type="password" name="pw" autocomplete="off"><!-- 비밀번호에는 autocomplete="off" -->
+            <input type="submit">
+        </fieldset>
+        <!--  -->
+        <!-- html5 그 외 입력양식 제한 type-->
+        암기<input type="search" autofocus> <!-- 검색 문자열을 입력하는 한 줄 텍스트 필드.
+        autofocus 페이지 로드시 자동으로 포커스가 input요소에 가도록함 -->
+        <input type="email"> <!-- @가 빠지면 브라우저가 알려준다 -->
+        <input type="url" value="http://"> <!-- text일렵필드처럼 보이지만, 검증매개 변수들이 존재한다. value를 이용해서 반복되는 양식을 작성해 입력을 도울 수 있다 -->
+        <input type="tel"> <!-- 전화번홀르 입력하는 컨트롤 -->
+        암기<input type="text" required> <!-- required = 반드시 입력해야 하는 칸 지정 -->
+        암기<input type="text" minlength="4" maxlength="8" size="5"> <!-- 글자수 제한. 최소글자수 최대글자수 지정. size = 보여지는 글자수 -->
+        나이 <input type="number" name="age" min="14" max="99"> <!-- 최소숫자 최대숫자 지정-->
+        <textarea></textarea><!-- 공백있으면 안 됨. input이 아닌 textarea의 글자수는 지정 못 함. 개발자의 영역 -->
+        
+        <h2>강좌선택</h2>
+        html <input type="radio" name="" disabled> <!-- disabled 항목에 있지만 현재 선택불가 -->
+        css <input type="radio" name="">
+        c++ <input type="radio" name="">
+    </form>
+</body>
+</html>

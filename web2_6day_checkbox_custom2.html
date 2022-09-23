@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> 체크박스 커스텀  </title>
+	<style>
+        body { padding: 50px; }
+        .checkbox input, 
+        .checkbox2 input
+        {
+            position: absolute; 
+            left: -9999px;
+        }
+        .checkbox label {
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            border-radius: 10px;
+            background: #777;
+            color: transparent; /* 접근성의 문제로 안보이게 하더라도 글자는 넣어줘야 함*/
+            position: relative;
+        }
+        .checkbox label:before {
+            content: '';
+            /*display: block;  position: absolute;주면 자동으로 블럭됨. 안써도 됨*/
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        
+        
+        .checkbox input:checked + label {
+            background: #f06292;
+        }
+        
+        .checkbox input:checked + label:before  {
+            content: '';
+            position: absolute;
+            left: auto; /* 초기화 값 줘야 함 */
+            right: -2px;
+            top: -2px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background-color: #f8bbd0;
+        }
+        
+        /* 이미지 */
+        .checkbox2 label:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 2px 5px;
+            background: url(img/checkbox_off.png) no-repeat 0 0;
+            background-size: 20px; 
+            vertical-align: bottom;
+        }
+        
+        .checkbox2 input:checked + label:before {
+            background: url(img/checkbox_on.png) no-repeat;
+            background-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1> 체크박스 </h1>
+    <div class="checkbox">
+        <input type="checkbox" id="check1">
+        <label for="check1">선택1</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="check2">
+        <label for="check2">선택2</label>
+    </div>
+    
+    <!-- 이미지 커스텀 -->
+    <h1> 이미지 체크박스 </h1>
+    <div class="checkbox2">
+        <input type="checkbox" id="check3">
+        <label for="check3">발레</label>
+    </div>
+    <div class="checkbox2">
+        <input type="checkbox" id="check4">
+        <label for="check4">축구</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> hansol - visual </title>
+	<link rel="stylesheet" href="css/web2_19_hansol_visual.css">
+</head>
+<body>
+  <!-- 본문가로가기 만들기 (내부링크 이용 )= 접근성 -->
+  <a href="#content" class="skip">본문바로가기</a>
+   <section class="visual"><!-- 접근성 : <section>태그 제목태그 필수 -->
+      <h2 class="hide">광고영역</h2><!--이번 다음버튼 맨처음하는 사람도 있고 맨 밑에 하는 사람도 있음-->
+      <a href="#" class="prev">이전</a>
+      <a href="#" class="next">다음</a>
+      <div class="control"> <!-- center: 광고 배너의 스크롤 계속 변화하는 부분 양이 많아지던 적어지던 센터이여야 하므로 center 주고 밑에 div에 inlin-block; 준 것-->
+          <div>
+              <!-- inline-block; padding-right 배치할 거임-->
+              <div>
+                  <a href="#" class="play on">시작</a>
+                  <a href="#" class="stop">일시정지</a>
+              </div>
+              <ul>
+                  <!-- inline-block; 의 버튼과 옆으로 배치-->
+                  <li class="on"><a href="#">한솔홈데코 비전</a></li>
+                  <li><a href="#">신상품</a></li>
+                  <li><a href="#">제품정보</a></li>
+                  <li><a href="#">학생할인</a></li>
+                  <li><a href="#">신혼부부할인</a></li>
+                  <!-- 접근성 : <a>태그안에 글씨</a>는 꼭 써주기-->
+              </ul>
+          </div>
+      </div>
+      <div class="content">
+          <div class="slide-img">
+              <div class="txt">
+                  가구소재에서 <br> 인테리어 자재까지
+                  <p>한솔홈데코 편리하고 행복한 공간을 만들어갑니다.</p>
+              </div>
+          </div>
+      </div> 
+   </section>
+</body>
+</html>

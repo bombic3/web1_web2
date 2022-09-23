@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table - col,colgroup 태그 p.39 </title>
+	<style>
+        table { border-collapse: collapse; }
+        caption { text-transform: uppercase; text-align: right;}
+        th, td { padding: 10px; border: 1px solid gray; width: 150px; text-align: center; }
+        thead { background: lightgrey; border-top: 5px solid grey;}
+        colgroup {background: pink;}
+    </style>
+</head>
+<body>
+       <table>
+          <caption>student info</caption>
+          <colgroup span="1"></colgroup>
+          <thead>
+              <tr>
+                  <th>학번</th>
+                  <th>이름</th>
+                  <th>학과</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>2006123456</td>
+                  <td>홍길동</td>
+                  <td>전자공학과</td>
+              </tr>
+              <tr>
+                  <td>2007123789</td>
+                  <td>백두산</td>
+                  <td>일어일문과</td>
+              </tr>
+          </tbody>
+       </table>
+</body>
+</html>

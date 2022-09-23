@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transform cube </title>
+	<style>
+        * { box-sizing: border-box; }
+        body { background: #999; }
+        .container {
+            position: relative;
+            margin: 200px auto;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cube {
+            width: inherit;
+            height: inherit;
+            transform-style: preserve-3d;
+            transform: rotate3d(1,1,1,45deg);
+        }
+        .side {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: 5px solid #fff;
+            line-height: 300px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+        }
+        
+        .front {
+            transform: translateZ(150px);
+            /* 양수=앞으로이동 z쪽으로 이동, 요소의 크기 반만큼 300>150 */
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(150px);
+            /* rotateY(180deg) = 글씨 뒤집음
+                뒷 방향으로 돌고 150px 앞으로 = 뒤집었기때문에 결국 뒤로 이동 */
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        
+        
+    </style>
+</head>
+<body> <!-- 현업에서는 직접 안 짬. 가져다 와서 수치만 약간 조정해서 씀 -->
+    <div class="container">
+        <div class="cube">
+            <div class="side front">front</div>
+            <div class="side back">back</div>
+            <div class="side right">right</div>
+            <div class="side left">left</div>
+            <div class="side top">top</div>
+            <div class="side bottom">bottom</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> layout01 </title>
+		<style>
+			.wrap { width: 1000px; height: 900px; margin: 0 auto; 
+					font-size: 40px; text-align: center; text-transform: uppercase;}
+			.header { width: 100%; height: 100px; background-color: #00acc1; line-height: 100px; }
+			.nav { width: 100%; height: 100px; line-height: 100px; background-color: #5ddef4; }
+			.side { width: 300px; height: 600px; line-height: 600px; background-color: #0095a8;
+					float: left; }
+			.contents { width: 700px; height: 600px; line-height: 600px; background-color: #007c91; 
+						float: left;}
+			.footer { width: 100%; height: 100px; line-height: 100px; background-color: #5ddef4;
+					clear: both;} /* 위의 요소들이 float이라서 따라 들어감 클리어 시켜줘야 됨. 좌우 모두 클리어가 편함 = both 해주기*/
+		</style>
+	</head>
+	<body>
+	<!-- 사이즈는 상속 안 됨.
+	text-transform: uppercase; 모든글자 대문자로
+	글자의 수직정렬 = line-height: ; 줄간격을 높이값과 동일 값주기  
+	but 한 줄일 경우만 해당 ex. 메뉴 등에 사용한다 -->
+	<!-- float: left; 는 16강-->
+	<!--clear: both;} 위의 요소들이 float이라서 따라 들어감 클리어 시켜줘야 됨.
+	좌우 모두 클리어가 편함 = both 해주기-->
+		<div class="wrap">
+			<div class="header">header</div>
+			<div class="nav">nav</div>
+			<div class="side">side</div>
+			<div class="contents">contents</div>
+			<div class="footer">footer</div>
+		</div>
+	</body>
+</html>

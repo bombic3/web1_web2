@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+html { font-size: 20px; }
+body { font-family: "Apple Gothic", "Helvetica", "Arial", sans-serif; }
+
+.music {
+    width: 100%;
+    background: #1c1c1c;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 75px 0 87px;
+    box-sizing: border-box;
+}
+
+.music h2 {
+    font-size: 2rem;/*=40px*/
+    font-weight: 600;/*폰트에 따라서 적용이 되는 것이 있고 안되는 것이 있음*/
+}
+.music img {
+    width: 100%;
+    margin-top: 73px;
+}
+
+
+.music .row {
+    width: 49rem;/*반응형대신 %로 사용*/
+    height: 8.6rem;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+.music .row > li {
+    width: 12rem;
+    height: 8.5rem;
+    display: inline-block;
+    padding-top: 90px;
+    position: relative;
+}
+.music .row h3 {
+    margin: 20px 0 10px;
+    letter-spacing: 1px;
+}
+.music .row h3:after {
+    content: '';
+    display: block;
+    widows: 3.55rem;
+    height: 4.5rem;
+    background: url(../img/apple_music01.jpg) no-repeat center/cover;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%)
+}
+.music .row > li:nth-child(2) h3:after {
+    background-image: url(../img/apple_music02.jpg) no-repeat center/cover ;
+}
+.music .row > li:nth-child(3) h3:after {
+    background-image: url(../img/apple_music03.jpg) no-repeat center/cover;
+}
+.music .row > li:nth-child(4) h3:after {
+    background-image: url(../img/apple_music04.jpg) no-repeat center/cover;
+}
+
+.music .row a {
+    color: #2997ff;
+    font-size: 0.85rem;
+}
+.music1 {
+    width: 100%;
+    height: 18rem;
+    padding: 150px 0 60px;
+    color: #1d1d1f;
+    word-break: keep-all;
+}
+.music1 h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+}
+.music1 h2:before {
+    content: '';
+    display: block;
+    widows: 3.2rem;
+    height: 3.2rem;
+    background: url(../img/applemusic-icon.jpg) no-repeat center/100%;
+    position: absolute;
+    left: 50%;
+    top: -80px;
+    transform: translateX(-50%);
+}
+.music1 p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    /* 실무에서는 계산안하고 대부분 1.5~1.6정도 씀 큰 글씨는 2정도 */
+    margin: 15px 0;
+}
+.music1 a { color: #0066cc; }

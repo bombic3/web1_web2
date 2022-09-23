@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table - 셀병합 p.35 </title>
+	<style>
+        table { border-collapse: collapse; }
+        /* reset 코드 = 보더 겹치지 않고 한 줄로 표현 */
+        
+        th, td { border: 1px solid grey; padding: 20px;}     
+    </style>
+</head>
+<body>
+  <!-- 표의 구조태그 정의함으로써 시각 장애인들도 화면 낭독기를 통해 표의 구조를 쉽게 이해할 수 있습니다.  -->
+   <table>
+        <thead>
+               <tr>
+                   <th colspan="4">Tempertature</th>
+               </tr>
+               <tr>
+                   <th>Month</th>
+                   <th>High</th>
+                   <th>Low</th>
+                   <th>Average</th>
+               </tr>
+        </thead>
+        <tbody>
+              <tr>
+               <td>January</td>
+               <td>48</td>
+               <td>37</td>
+               <td>43</td>
+               </tr>
+               <tr>
+                   <td>February</td>
+                   <td>49</td>
+                   <td>37</td>
+                   <td rowspan="2">43</td>
+               </tr>
+               <tr>
+                   <td>March</td>
+                   <td>52</td>
+                   <td>39</td>
+               </tr>
+               <tr>
+                   <td>April</td>
+                   <td>58</td>
+                   <td>43</td>
+                   <td>37</td>
+               </tr>
+        </tbody>
+   </table>
+</body>
+</html>

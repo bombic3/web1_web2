@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> fill-mode p.114 </title>
+	<style>
+        .demo {
+            border-top: 100px solid #ccc;
+            height: 300px;
+        }
+        @keyframes grow {
+            0% { font-size: 12px;}
+            100% { font-size: 40px; }
+        }
+        
+        .demo:hover .grows {
+            animation-name: grow; animation-duration: 3s;
+            /* animation-fill-mode: none; = 기본값 animation 100% 도달 후 시작 키프레임 이동하고 속성 초기화 = 처음으로 */
+        }
+        .demo:hover .stays1 {
+            animation-name: grow; animation-duration: 3s;
+            animation-fill-mode: forwards;
+            /* forwards; animation 100% 도달 후 종료 키프레임 유지 */
+        }
+        .demo:hover .stays2 {
+            animation-name: grow; animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+            /* backwards; none과 동일하나 시작 키프레임 설정을 미지 적용 (delay 적용시 확인, 두번째 구현부터 delay 값 무시 됨 
+            both; 둘다 적용 */
+        }
+    </style>
+</head>
+<body>
+    <p>회색 박스 위에 마우스를 올려보세요!</p>
+    <div class="demo">
+       <div class="grows">이 글씨는 커집니다. 종료상태 none</div>
+       <div class="stays1">이 글씨는 커지며, 커진 상태를 유지합니다.</div>
+       <div class="stays2">이 글씨는 커지며, 커진 상태를 유지합니다.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> p.174 백그라운드 이미지 사이즈 </title>
+	<style>
+        div { width: 400px; height: 300px; border: 1px solid gray; margin: 20px; 
+            background-image: url(img/background_01.jpeg); 
+            background-repeat: no-repeat;
+        }
+        .cover { background-size: cover; /* 50%; */ } /* 영역에 꽉 차지만 비율 안맞는 부분 잘림 */
+        .contain { background-size: contain; } /* 포함 > 다 포함 시킨다(잘린 부분이 없음)*/
+	</style>
+</head>
+<body>
+    <!-- cover = 내가 정한 영역에 최대한 꽉 차게, 이미지가 비율에 맞지 않는 영역은 크롭 됨.
+        contain = 내가 정한 영역에 최대한 꽉 차게, 이미지가 비율에 맞지 않는다면 남은 영역이 생김.
+        단일 값 = 50%; , 50% auto;  가로에 대한 너비를 이 값으로 하고 높이는 auto(auto는 생략가능)
+-->
+   <div class="cover"></div>
+   <div class="contain"></div>
+</body>
+</html>

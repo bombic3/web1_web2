@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 박스모델 - border </title>
+	<style>
+        h1 { 
+            width: 300px; height: 100px; /* 블럭요소이기 때문에 사이즈를 주어야 한다*/
+            border-width: 10px;
+            border-style: dashed; /* dotted double solid none: 기본 box있는 태그에 사용*/
+            border-color: #555; /* 완전한 흰색이나 블랙은 사용x 접근성에 어긋남 */
+        }
+        h2 {
+            width: 300px;
+            border-bottom: 2px dotted gray;
+            border-right: 10px solid red;
+        }
+        div {
+            border: 10px double #444;
+            width: 300px; height: 60px;
+            
+        }
+        article {
+            width: 200px; height: 200px;
+            border: 1px solid gray; background: lightgray; color: #555;
+            font-size: 20px; text-align: center; line-height: 200px;
+            display: inline-block; margin: 10px;
+        }
+        .box1 { border-radius: 20px; }
+        .box2 { border-radius: 50%;}
+        .box3 { border-radius: 10px 20px 40px 60px;}
+        .box4 { border-radius: 50px 0 50px 0;}
+        .box5 { border-radius: 200px 0 0 0;}
+        .box6 { border-radius: 200px 0 200px 0;}
+        .box7 { border-radius: 200px 200px 200px 0;}
+        
+	</style>
+</head>
+<body>
+	<h1> css box-model </h1>  
+    <h2> css border </h2>
+    <div></div>
+    <hr>
+    <!--p.115-->
+    <h3>border radius</h3>
+    <article class="box1"></article>
+    <article class="box2"></article>
+    <article class="box3"></article>
+    <article class="box4"></article>
+    <article class="box5"></article>
+    <article class="box6"></article>
+    <article class="box7"></article>
+    
+</body>
+</html>

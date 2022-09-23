@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/* reset */
+body {
+    font-size: 15px; line-height: 1;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.hide {
+    position: absolute;
+    left: -9999px;
+}
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 본문바로가기(reset) */
+.skip {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff; 
+    background: #000;
+    text-align: center;
+    transition: 0.5s;
+}
+.skip:focus {
+    top: 0;
+} /* tap누르면 뜸 */
+
+
+/* style */
+header {
+    text-align: center;
+}
+header h1 {
+    width: 110px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    color: transparent;
+    /* 글자 보이지 않게 하려고 */
+}
+header h1 a { 
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/logo.png) no-repeat;
+}
+
+
+header .gnb li {
+    display: inline-block;
+}
+header .gnb li a {
+    display: block;
+    height: 81px;
+    line-height: 81px;
+    font-size: 16px;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* hover 했을 때 */
+header .gnb li a:hover {
+    color: #2d5b79;
+    font-weight: bold;
+}
+
+header .gnb li a span {
+    position: relative;
+}
+header .gnb li a:hover span:after {
+    content: '';
+    display: block;
+    background: #2d5b79;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -9px;
+}
+
+header .spot {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    font-size: 12px;
+}
+header .spot li {
+    float: left;
+    text-transform: uppercase;
+    position: relative;
+}
+header .spot li:after {
+    content: '';
+    /*display: block; position: absolute; 주면 안 줘도 됨 */
+    width: 1px;
+    height: 6px;
+    background: #ccc;
+    position: absolute;
+    top: 38px;
+    right: 0px;
+   /* margin-top: -3px; top대신 이거 줘도 됨 */
+}
+header .spot li:last-child:after {
+    display: none;
+}
+header .spot li a {
+    display: block;
+    height: 81px;
+    line-height: 81px;
+    color: #333;
+    padding: 0 10px;
+    letter-spacing: 1px;
+}
+header .spot li a:hover {
+    text-decoration: underline;
+}
+/* 마지막 있는 a 오른쪽 패딩을 제거 */
+/* 
+header .spot li:last-child a {
+    padding-right: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+

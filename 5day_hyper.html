@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>하이퍼링크</title>
+		<style>
+			/*reset*/
+			a, div { text-decoration:none; display: block; margin: 20px; } 
+			
+			.btn { width: 100px; height: 40px; background-color: #80d6ff; text-align: center; color: #fff; 
+			
+			/* 수직의 정렬 코드는 없다 
+			= 방법은 line-height (줄간격을 높이값과 동일하게 준다)
+			한 줄일 때만 사용 가능*/
+			line-height: 40px;
+			
+			/* border-radius: 50%; 로 하면 타원형으로 됨*/
+			border-radius: 20px; }
+			
+			.btn01 { width: 150px; height: 40px; background-color: #ff79b0; text-align: center; color: #fff;
+			line-height: 40px; border-radius: 20px; }
+			
+			.btn02 { width: 150px; height: 40px; background-color: #32cb00; color: #fff; text-align: center;
+			line-height: 40px; border-radius: 20px; }
+			
+			.btn03 { width: 150px; height: 40px; background-color: #2962ff; color: #fff; text-align: center;
+			line-height: 40px; border-radius: 20px;}
+			
+			div img {width: 200px;}
+			
+		</style>
+	</head>
+	<body>
+	<!--인라인요소 특징 : 한 줄을 다 쓰지 않는다. 인라인배치, 가로,세로 크기를 줄 수 없다	-->
+	<!--블럭요소 특징 : 한 줄을 다 쓴다. 아래로 배치, 가로, 세로 크기를 줄 수 있다 -->
+	<!-- 버튼 만들기 -->
+		<a class="btn01" href="http://google.co.kr" target="_blank">구글 바로가기</a>
+		<a class="btn02" href="http://www.naver.com" target="_blank">네이버 바로가기</a>
+		<a class="btn03" href="http://www.daum.net" target="_blank">다음 바로가기</a>
+		<a class="btn" href="#">로그인</a>
+		
+		<!-- 이미지를 포함한 링크 -->
+		<div>
+			<a href="http://google.co.kr" target="_blank"><img src="img/logo01.png" alt="구글로고" title="온스테이지 10주년"></a>
+			<a href="http://www.naver.com" target="_blank"><img src="img/logo02.png" alt="네이버로고" title="네이버 바로가기"></a>
+			<a href="http://www.daum.net" target="_blank"><img src="img/logo03.png" alt="다음로고" title="다음 바로가기"></a>
+		</div>
+		
+		<!-- 링크의 기능 -->
+		<a href="tel:0430495">고객센터 전화연결</a>
+		<a href="tel:0430495">043-0495</a>
+		<a href="http://www.example.com">웹사이트 연결</a>
+		<a href="mailto:rlawldud627@naver.com">이메일 연결</a>
+		
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> ani - ex </title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+	<style>
+        * { padding: 0; margin: 0; }
+        html, body { overflow-x: hidden; }
+        /* html, body { overflow-x: hidden; }
+        헤더부분 배경 화거대됐다가 작아질 때 스크롤 생성되지 않게 하는 코드
+        html, body 둘 다에 줘야 함. x축에 히든 줘야 함 */
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        
+        /* @keyframes 먼저 작성하고 나중에 이름넣기 */
+        @keyframes opacity {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes slide_up {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+         @keyframes size {
+            0% { background-size: 110%; }
+            100% { background-size: 100%;; }
+        }
+        @keyframes logo {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        
+        header {
+            width: 100%;
+            height: 500px;
+            padding: 50px;
+            color: #fff;
+            background: url(img/17_main_visual01.jpg) no-repeat;
+            animation: size 3s ease-in-out forwards;
+        }
+        header h1 img {
+            animation: logo 2s ease forwards;
+        }
+        
+        header h2 {
+            font-size: 50px;
+            line-height: 1;
+            margin-top: 150px;
+            text-transform: uppercase;
+            animation: opacity 1s ease;
+        }
+        header p {
+            margin-top: 50px;
+            animation: slide_up 2s 0.2s ease-in-out forwards;
+        }
+        header span {
+            animation: opacity 4s 0.1s ease forwards;
+        }
+        header span:nth-of-type(2) {
+            animation-delay: 0.2s;
+        }
+        header span:nth-of-type(3) {
+            animation-delay: 0.4s;
+        }
+        header span:nth-of-type(4) {
+            animation-delay: 0.6s;
+        }
+        header span:nth-of-type(5) {
+            animation-delay: 0.8s;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="img/17_logo.png" alt=""></h1>
+        <h2>
+            <span>we</span>
+            <span>help</span><br>
+            <span>our</span>
+            <span>client</span><br>
+            <span>succeed</span>
+        </h2>
+        <p>
+        인텔렉추얼데이터는 늘 고객의 신뢰를 최우선 가치로 두고,<br>
+        고객의 입장에서 업무를 지원합니다.
+        </p>
+    </header>
+</body>
+</html>

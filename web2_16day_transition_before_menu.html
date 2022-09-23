@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transition-menu </title>
+	<style>
+        ul,li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        body { background: #555; }
+        
+        .menu a {
+            font-size: 80px;
+            font-weight: bold;
+            color: #222;
+            position: relative;
+        }
+        
+        
+        
+        .menu a:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            color: hotpink;
+            transition: 0.2s;
+            overflow: hidden;
+            white-space: nowrap;
+            /* 가로영역의 사이즈가 줄면 요소는 밑으로 내려가므로 줄넘김 방지 코드 */
+            
+            
+        }
+        .menu li:nth-child(1) a:before {
+            content: 'about us';
+        }
+        .menu li:nth-child(2) a:before {
+            content: 'works';
+        }
+        .menu li:nth-child(3) a:before {
+            content: 'services';
+        }
+        .menu li:nth-child(4) a:before {
+            content: 'bontact us';
+        }
+        
+        
+        /* 0% -> 100% */
+        
+        .menu a:hover:before {
+            width: 100%;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   <!-- ul 태그는 <nav>와 제목태그로 유효성 맞추기 -->
+    <ul class="menu">
+        <li><a href="#">about us</a></li>
+        <li><a href="#">works</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">bontact us</a></li>
+    </ul>
+</body>
+</html>

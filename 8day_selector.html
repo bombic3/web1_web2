@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 자손선택자와 자식선택자, 다중 클래스  </title>
+	<style>
+		div p { color: red; }
+		div > p { background-color: yellow;}
+		
+	
+		.box { width: 100px; height: 100px;}
+		.color1 { background-color: pink; }
+		.color2 { background-color: skyblue; }
+	</style>
+</head>
+<body>
+<!-- 공백 = 하위 요소 전부 -->
+<!--   >  = 직계 자식만 선택 (손자는 아님) -->
+	<h1>자식 선택자</h1>
+	<p>div태그 외부의 p태그는 선택 되지 않는다</p>
+	<div>
+		<p>div태그 바로 밑에 존재하는 p태그만 선택</p>
+		<p>div태그 바로 밑에 존재하는 p태그만 선택</p>
+		<span>
+			<p>span이 감싸는 p태그는 선택되지 않는다</p>
+			<p>span이 감싸는 p태그는 선택되지 않는다</p>
+		</span>
+	</div>
+	<p>div태그 외부의 p태그는 선택 되지 않는다</p>
+		
+	<!-- 다중클래스 = 공백 -->
+	<div class="box color1"></div>
+	<div class="box color2"></div>
+</body>
+</html>

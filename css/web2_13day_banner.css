@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+a:hover { text-decoration: none; }
+.hide { position: absolute; left: -9999px; }
+
+.notice {
+    margin-top: 100px;
+}
+.notice > div {
+    width: 1180px;
+    margin: 0 auto;
+}
+.notice > div .top > ul {
+    float: left; /*inline-block하면 vertical얼라인 애먹음*/
+}
+.notice > div .top > ul li {
+    float: left;
+    text-align: center;
+    width: 280px; 
+    height: 200px; 
+    margin-right: 20px;
+}
+
+.notice > div .top > ul a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    color: #222;
+    padding-top: 80px;
+    box-sizing: border-box;
+    font-weight: bold;
+    transition: 0.5s;
+}
+/* display: none; 은 transition적용이 안 됨*/
+.notice > div .top > ul a span {
+    opacity: 0; /*보이지 않았다가 보이게 만들기*/
+    display: block; /* display: block;한 이유= opacity: 0;적용은 옆으로 배치가 된다. 때문에 display: block;시켜서 아래 배치*/
+}
+.notice > div .top > ul a:hover {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.notice > div .top > ul a:hover span {
+    opacity: 1;
+    font-weight: normal; 
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+/* a태그에 배경을 넣게 되면 이미지가 우선시 되어 배경색이 표현이 안된다. 배경색이 위로 올라와야 하기 때문에 a태그에 색상을 넣어 표현한다 */
+
+.notice > div .top > ul li:nth-child(1) {
+    background: url(../img/banner_bcg1.jpg) no-repeat center/cover;
+}
+.notice > div .top > ul li:nth-child(2) {
+    background: url(../img/banner_bcg2.jpg) no-repeat center/cover;
+}
+.notice > div .top > ul li:nth-child(3) {
+    background: url(../img/banner_bcg3.jpg) no-repeat center/cover;
+}
+
+.notice > div .top > div {
+    float: left;
+    width: 280px;
+    height: 200px;
+    background: #f2f2ed;
+    padding: 26px 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.notice > div .top > div > div {
+    padding-bottom: 10px;
+}
+.notice > div .top > div h3 {
+    font-size: 17px;
+    color: #000;
+    padding-bottom: 10px;
+}
+
+.notice > div .top > div select,
+.notice > div .top > div input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    text-indent: 20px;
+}
+.notice > div .top > div a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: #2d5b79;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> tab-menu </title>
+	<style>
+        .tab_content {
+            width: 500px;
+            margin: 100px auto;
+            position: relative;
+        }
+        input[type="radio"] {
+            display: none; /* input은 none해도 접근성 문제 없음*/
+        }
+        input[type="radio"] + label {
+            display: inline-block;
+            padding: 20px;
+            background: #fff;
+            color: #999;
+            font-size: 14px;
+            border-radius: 20px 20px 0 0;
+            cursor: pointer;
+        }
+        input[type="radio"]:checked + label {
+            background: #ddd;
+            color: #000;
+        }
+        
+        .box {
+            width: 500px;
+            height: 400px;
+            background: #ddd;
+            margin: 0 auto;
+            display: none;
+            position: absolute;
+            padding: 50px;
+            box-sizing: border-box;
+            border-radius: 0 0 50px 50px;
+        }
+        input[id="tab_01"]:checked ~ .content1 {display: block; }
+        input[id="tab_02"]:checked ~ .content2 {display: block; }
+        input[id="tab_03"]:checked ~ .content3 {display: block; }
+    </style>
+</head>
+<body>
+  <div class="tab_content">
+      <input type="radio" id="tab_01" checked name="tab">
+      <label for="tab_01">button_01</label>
+      <input type="radio" id="tab_02" name="tab">
+      <label for="tab_02">button_02</label>
+      <input type="radio" id="tab_03" name="tab">
+      <label for="tab_03">button_03</label>
+      
+      <div class="box content1">content1</div>
+      <div class="box content2">content2</div>
+      <div class="box content3">content3</div>
+  </div>
+</body>
+</html>

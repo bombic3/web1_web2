@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> position </title>
+	<style>
+		body { margin: 0; padding: 0; }
+		.parent {
+			border: 10px dashed gray;
+			padding: 20px;
+			margin: 20px;
+			font-size: 20px;
+			position: relative; /* position: absolute; 를 자식에게 */
+			
+		}
+		.child { 
+			background-color: #eee;			
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		.box1 { position: relative; left: -50px; top: -50px; }
+		.box2 { position: absolute; left: 0; top 0; }
+		.box3 { position: fixed: top: 0; }
+        .box4 { position: static; } /*기본값 ( 적용이 안되는데 오류라고 인지하지 못하기 때문에 개발자가 인지하고 있어야 할 사항이다. left: 50px; top: 50px; 줘도 움직일 수 없음 )*/
+
+
+
+	</style>
+</head>
+<body>
+<!-- relative : 자신이 원래 있어야 할 위치를 기준으로 offset에 따라배치된다
+부모의 position 속성에 영향을 받지 않는다.
+normal flow의 흐름에 따른다
+주변 요소에 영향을 주지 않으면서 offset 값으로 이동한다-->
+
+<div class="parent">
+		<div class="child">child</div>
+		<div class="box1 box">box</div>
+		<div class="child">child</div>
+	</div>
+
+<!-- absolute: 부모 요소의 위치 기준으로 삼으며 부모가 static이 아닌경우의 조상까지 찾아 올라간다. 결국body까지
+부모에게 position: relative; 
+자식에세 position: absolute;
+부모의 border를 제외한 곳부터 0,0으로 잡는다-->
+
+
+	<div class="parent">
+		<div class="child">child</div>
+		<div class="box2 box">box</div>
+		<div class="child">child</div>
+	</div>
+<!-- absolute, fixed는 인라인 요소일 때 display:block처럼 변경 시킴, inline-block값을 임의 지정ㅇ하면 그 값을 유지-->
+
+<!-- fixed : 뷰포트 기준으로 뷰포트(브라우저 창)를 기준으로 offset에 따라 배치된다.
+즉, 화면 스크롤에 관계없이 항상 화면의 정해진 위치에 정보가 나타난다.
+부모의 위치에 영향을 받지 않는다.
+
+사용하는 방법 = 스크롤이 길때 항상 그자리에 있게 할 경우 ex. 모바일 메뉴(햄버거)
+-->
+	<div class="parent">
+		<div class="child">child</div>
+		<div class="box3 box">box</div>
+		<div class="child">child</div>
+	</div>
+    
+    <!-- normal-flow에 따라 배치되며 offset 값이 적용되지 않는다. (기본값)
+-->
+	<div class="parent">
+		<div class="child">child</div>
+		<div class="box4 box">box</div>
+		<div class="child">child</div>
+	</div>
+    
+</body>
+</html>

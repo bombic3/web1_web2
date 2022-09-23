@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> css 속성 우선순위</title>
+		<style>
+		 /* 나중에 적용된 css 속성값의 우선 순위가 높음 */
+		 p { color: red; }
+		 p { color: blue; }
+		 /* 선택자를 구체적으로 작성할 수록 우선순위가 높음 */
+		 div h2 { color: blue; }
+		 h2 { color: blue; }
+		 /* 선택자 종류에 따른 우선순위
+			tag < class < id < inline   */
+		h3 { color: blue; }
+		.color { color: red; }
+		#color { color: yellow; }
+		</style>
+	</head>
+	<body>
+		<p>css</p>
+		
+		<div>
+			<h2>nice to meet you</h2>
+		</div>
+		
+		<h3 style="color:pink;" class="color" id="color"> welcome to css </h3>
+	</body>
+</html>

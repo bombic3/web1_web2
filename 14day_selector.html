@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> selector연습 </title>
+	<style>
+        /* reset */
+        a { color: inherit; text-decoration: none; }
+        /* style */
+        /* 요소와 클래스의 조합 - 띄어쓰기x 꼭 붙여서 사용하기(~이면서~인것)
+                                띄어쓰기하면 하위를 선택하는 것 됨(~안에 있는 하위요소 ~) */
+        p.txt { color: red; }
+        /* 다중 클래스 */
+        .foo.txt { color: blue; }
+        /* 아이디와 클래스의 조합 */
+        #foo.txt { text-decoration: underline; }
+        
+        /* 속성선택자 - 띄어쓰기x[]안에 속성 넣어서 선택 */
+        a[target] { color: red; }
+        li[class^="link"] { text-decoration: underline; }/* 클래스명의 ^(시작이) link인 것, *(포함하는 것) */
+        /* 클래스명의 시작이~ class^="" 
+            클래스명을 포함한~ class*="" */
+	</style>
+</head>
+<body>
+	<h2>선택자의 조합</h2>
+	<p class="txt">요소와 클래스의 조합</p>
+	<p class="foo txt">다중 클래스</p>
+	<p id="foo" class="txt">아이디와 클래스의 조합</p>
+	
+	<h2>속성 선택자</h2>
+	<ul>
+	    <li class="google"><a href="#" target="_blank">google</a></li>
+	    <li class="link1"><a href="#" target="_blank">daum</a></li>
+	    <li class="unlink1"><a href="#" target="_blank">daum</a></li>
+	</ul>
+	<a href="#">master@sbs.com</a>
+</body>
+</html>

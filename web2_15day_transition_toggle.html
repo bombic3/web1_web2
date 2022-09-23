@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transition-toggle </title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+        /* 콘텐츠 내용이 길어져도 메뉴는 고정 = fixed */
+        .hide {
+            position: absolute;
+            left: -9999px;
+        }
+        h2, a { color: #fff; }
+        
+        
+        label { 
+            padding: 5px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            
+            z-index: 1; /* 얘가 보여야 함 */
+        }
+        label span {
+            display: block;
+            width: 30px;
+            height: 5px;
+            border-radius: 3px;
+            background: #333;
+            margin: 3px;
+            cursor: pointer;
+        }
+        
+        nav {
+            background: #444;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* 숨기기 위해 크기만큼 - 해 줌*/
+            bottom: 0;
+            /*
+            top: 0;
+            left: 0;
+            bottom: 0;
+            로 해놓고 나중에 옮기기 */
+            transition: 0.3s;
+            padding-top: 50px;
+            
+        }
+        nav ul, li {
+            padding: 15px 10px;
+            font-weight: bold;
+        }
+        
+        input:checked ~ nav {
+            left: 0; /* 보이게 제자리로 해 둔 것 */
+        }
+        input:checked + label > span {
+            background: #fff; /* 메뉴 아이콘 흰색으로 */
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu_check" class="hide">
+    <label for="menu_check">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav>
+        <h2 class="hide">side menu</h2>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">contact-us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

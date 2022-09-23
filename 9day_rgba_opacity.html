@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> rgba와 opacity 비교</title>
+		<style>
+			.banner1 { background-color: rgba(255, 255, 0, 0.5);}
+			.banner2 { background-color: #ff0; opacity: 0.2;}
+		</style>
+	</head>
+	<body>
+	<!-- p. 186 
+		opacity 투명도 : 해당 요소 내에 있는 모든 요소가 함께 투명-->
+		<div class="banner1">
+			<h2>rgba 값 적용</h2>
+			<p class="txt">텍스트 및 자식 요소는 투명도가 적용되지 않고 배경색상만 투명해진다.</p>
+		</div>
+		<div class="banner2">
+			<h2>opacity 적용</h2>
+			<p class="txt">해당 요소 내에 있는 모든 요소가 함께 투명</p>
+		</div>
+	</body>
+</html>

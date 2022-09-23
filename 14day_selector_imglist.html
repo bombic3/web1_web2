@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> images list </title>
+	<style>
+      .clear:after { content: ""; display: block; clear: both; }
+      body, ol { margin: 0; padding: 0; }
+      ol { list-style: none; text-align: center; font-size: 12px; line-height: 1.5;  }
+      
+      .wrap { background: #ddd; }
+      .main_list, 
+      .sub_list { width: 300px; margin: 0 auto; padding: 20px 0; }
+      
+      .main_list li { float: left; width: 90px; height: 90px; background: pink; line-height: 90px;}
+      /* 첫번째를 제외한 margin-left: 15px; */
+      .wrap .main_list li + li { margin-left: 15px}
+      
+      
+      .sub_list li { float: left; width: 48px; height: 48px; background: gray; line-height: 48px; margin: 0 15px 15px 0; }
+      /* 5번째 margin-right: 0; */
+      .sub_list li:nth-child(5n) { margin-right: 0; }
+      
+      
+	</style>
+</head>
+<body>
+	<div class="wrap">
+	  <div class="main_list clear">
+	    <ol>
+	      <li>90x90</li>
+	      <li>90x90</li>
+	      <li>90x90</li>
+        </ol>
+	  </div>
+	  <div class="sub_list clear">
+	    <ol>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	      <li>48x48</li>
+	    </ol>
+	  </div>
+	</div>
+</body>
+</html>

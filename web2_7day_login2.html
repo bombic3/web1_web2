@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> login-ex  </title>
+	<style>
+        /* reset */
+        ul, li { list-style: none; padding: 0; margin: 0; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* style */
+        .login {
+            width: 410px;
+            text-align: center;
+            margin: 40px;
+        }
+        .login input[type="text"],
+        .login input[type="password"] {
+            width: 252px;
+            height: 30px;
+            margin: 3px;
+            border: 1px solid #ddd;
+        }
+        
+        .login input[type="checkbox"] {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        .login label[for="chek1"]:before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid grey;
+            background-size: 15px; 
+            vertical-align: bottom;
+        }
+        
+        .login input#chek1:checked + label[for="chek1"]:before {
+            background: url(img/checkbox_on.png) no-repeat;
+            background-size: 15px;
+        }
+    </style>
+</head>
+<body>
+   <!-- fieldset 대신 section사용 fieldset은 묶음에 쓰임 -->
+    <section class="login">
+        <h2>로그인</h2>
+        <ul>
+            <li><input type="text" placeholder="아이디" autofocus></li>
+            <li><input type="password" placeholder="비밀번호" minlength="8" required></li>
+            <li><input type="checkbox" id="chek1"><label for="chek1">아이디 저장</label></li>
+            <li><button>로그인</button></li>
+        </ul>
+        <div>
+            <a href="#">회원가입</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+        </div>
+        <a href="#">비회원 주문조회</a>
+    </section>
+</body>
+</html>

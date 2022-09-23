@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 구조 선택자 </title>
+	<style>
+        li:first-child { color: blue; } /* 클래스면 하나씩 하기 귀찮으니까 선택자로 잡는 것 */
+        li:last-child { color: hotpink; }
+        li:nth-child(2) { color: red; }
+        li:nth-child(2n) { color: red; } /* 0, 1, 2 넣을 수 있음. 짝수만 선택 */
+        li:nth-child(2n+1) { color: green; } /* 홀수 선택 */
+	</style>
+</head>
+<body>
+	<ul>
+	    <li>메뉴</li>
+	    <li>메뉴</li>
+	    <li>메뉴</li>
+	    <li>메뉴</li>
+	    <li>메뉴</li>
+	    <li>메뉴</li>
+	    <li>메뉴</li>
+        <li>메뉴</li>
+	</ul>
+</body>
+</html>

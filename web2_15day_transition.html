@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transition p.98 </title>
+	<style>
+        div { 
+            margin: 0 auto; 
+            width: 300px;
+            height: 300px;
+            background: hotpink;
+            text-align: center;
+            line-height: 300px;
+            color: #fff;
+            text-transform: uppercase;}
+        
+        .tr { transition: 0.5s ease-out; /* 과정은 기본요소에 작성*/
+                cursor: pointer; } 
+        .tr:hover { width: 600px; /* 변화 결과만 작성 */ }
+    </style>
+</head>
+<body>
+    <div class="tr">transition</div>
+</body>
+</html>

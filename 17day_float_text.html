@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> float p.120 </title>
+	<style>
+        .container { width: 400px; padding: 15px; border: 2px dotted gray; }
+        .box { width: 100px; height: 100px; }
+        .box1 { background: pink; float: left; }
+        .box2 {background: skyblue; width: 150px; height: 150px; }
+        
+        .box3 { background: pink; float: left; opacity: 0.5; }
+        .box4 {background: skyblue; float: right; opacity: 0.5; }
+        
+        p { border: 2px solid red; } /* float적용해도 글자를 제외한 부분부터 p가 만들어진다*/
+        
+        .box5 { background: pink;  }
+        .box6 {background: skyblue; float: left; } /* span이라 글씨만큼한 색깔 밑으로 배치 이지만 flot: left; 로 사이즈 가지고 밑에 배치됨 */
+	</style>
+</head>
+<body>
+	<h2>요소를 보통의 흐름에서 벗어나 띄어지게 함</h2>
+     <div class="container">
+        <div class="box1 box">box1</div>
+        <div class="box2 box">box2</div>
+<!-- 인접한 형제 요소에 클리어 주는 방법 =  불필요한 요소가 생기는 것이므로 현업에서는 잘 안씀 (block요소에만 사용가능) -->
+        <div class="clear"></div>
+     </div>
+<!-- 원래 float의 성격은 블럭 재배치가 아닌 
+      글자와 이미지만 있을 당시, 글자가 자연스럽게 (배치)흐르도록 하기 위해 만든 것
+      주변 텍스트나 인라인 요소가 주위를 감싸는 특징 -->
+       
+        
+    <h2>주변 텍스트나 인라인 요소가 주위를 감싸는 특징</h2>
+    <div class="container">
+        <div class="box3 box">box3</div>
+        <div class="box4 box">box4</div>
+        <p>
+            모든 요소는 기본적으로 보통의 흐름에 따라 위에서 아래로,
+            그리고 좌측에서 우측으로 배치됩니다.
+            요소 박스의 경계대로 차례대로 배치되며 float 속성은 요소를 보통의 흐름에서 벗어나
+            독자적인 공간 위에 배치되게 됩니다.
+            float을 이용하면 주변 요소들과 더욱 자연스럽게 배치될 수 있지만,
+            floating 되지 않은 주변 요소들에도 영향을 주기 때문에 잘 이해하고 사용해야 합니다.
+        </p>
+     </div>
+     
+    <h2>대부분 요소의 display값을 block처럼 변경시킴 = 사이즈 적용가능</h2>
+      <!-- 예외, display: flex, inline-table -->
+    <div class="container">
+        <div class="box5 box">box5</div>
+        <span class="box6 box">box6</span>
+        <!-- 맨 나중에 clear추가 설명 태그 추가 div는 디자인 있으므로, span사용-->
+     </div>
+     
+     <!-- clear floating된 요소에서 벗어나 다음행에 영향이 없도록 = block요소만 적용가능 (inline-block은 적용불가) -->
+</body>
+</html>

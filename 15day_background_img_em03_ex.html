@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> p.174 백그라운드 이미지 ex03 </title>
+	<style>
+       /* reset */
+        body { padding: 0; margin: 0; box-sizing: border-box; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* style */
+        div { width: 100%; height: 400px; 
+            background-color: hotpink;
+            color: #fff; text-align: center;
+            padding: 50px; box-sizing: border-box;
+            background-image: url(img/appbies-bg-dot-left.png),/* 두 개 할땐 쉼표 꼭 넣기 */
+                            url(img/appbies-bg-dot-right.png);
+            background-repeat: no-repeat;
+            background-position: left top, right bottom;
+        }
+        
+        div h2 { font-size: 40px; }
+        div p { font-size: 28px;}
+        /* btn 완성하기 가상요소로 앞에 블릿 만들기 300*70px */
+        a.btn { display: inline-block; font-size: 30px; text-transform: capitalize;
+            width: 300px; height: 70px; line-height: 70px; border: 2px solid #fff; }
+        a:before { content: ''; display: inline-block; width: 25px; height: 25px; border-radius: 50%; background-color: #fff;
+        position: relative; left: -7px; top: 2px; }
+        
+	</style>
+</head>
+<body>
+    <!-- position: relative; = 나의 현재 위치를 기준으로 움직이겠다 -->
+    <div>
+        <h2>이젠 모바일로 편리하게!</h2>
+        <p>기분전환 텐바이텐</p>
+        <a href="#" class="btn">goole play</a>
+        <a href="#" class="btn">ios app store</a>
+    </div>
+</body>
+</html>

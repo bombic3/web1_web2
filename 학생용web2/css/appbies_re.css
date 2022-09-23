@@ -1,0 +1,489 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {font-size: 0.625em;}
+body {font-family: Lato, sans-serif; line-height: 1;}
+ul {list-style-type: none;}
+a {text-decoration: none;}
+button {border: none; background: none;}
+.blind {position: absolute; top: -9999px; left: -9999px;}
+.clear:after { content: ''; display: block; clear: both; }
+.wrap { width: 1600px; margin: 0 auto; }
+
+
+
+/* header */
+header {
+	background: url(../img/appbies-bg-visual.jpg) no-repeat center/cover;
+    height: 930px; /* 높이 */
+}
+
+header .headerInner {
+    width: 1172px;
+    margin: 0 auto;
+}
+header h1 {
+    float: left;
+    margin-top: 39px;
+}
+header nav {
+    float: right;
+    margin-top: 44px; 
+}
+header nav li {
+    float: left;
+    margin-left: 37px;
+}
+header nav li a {
+	color: #fff; font-size: 1.5rem; 
+	text-transform: uppercase;
+}
+
+header .visual {
+	color: #fff;
+    float: left;
+    width: 432px;
+    margin: 208px 0 0 113px;
+    text-align: center;
+}
+header .visual b {
+	font-size: 4.7rem; line-height: 1.277; font-weight: normal;
+}
+header .visual p {
+	font-size: 1.8rem; line-height: 1.667;
+    margin: 52px 0 76px;
+}
+header .visual a {
+	display: inline-block;
+	width: 238px; height: 59px; border: 2px solid #fff;
+	color: #fff; font-size: 2rem; line-height: 57px; font-weight: 300;
+	text-align: center;
+}
+header .phone {
+    float: right;
+    width: 393px;
+    height: 660px; /* 790? */
+    margin: 79px 97px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+header .phone span {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 291px;
+    height: 757px;
+    background: url(../img/appbies-obj-phone2.png);
+}
+header .phone span:last-child {
+    top: 0;
+    left: 0;
+    background: url(../img/appbies-obj-phone1.png);
+}
+
+
+
+/* main */
+section {
+    transform: skewY(3.5deg);
+    transform-origin: top left;
+}
+section > div {
+    transform: skewY(-3.5deg);
+}
+
+section h2 {
+	font-size: 4.7rem; font-weight: 300;
+	text-align: center;
+}
+
+	/* .download */
+.download {
+    height: 581px;
+    margin-top: -90px; /* 220px은 임의의 수 어차피 패딩 122px 들어감  */
+	background: #007ecf; 
+	color: #fff8f6;
+    text-align: center;
+}
+.download > div {
+    height: 100%;
+    padding-top: 122px;
+    background-repeat: no-repeat;
+    background-image: url(../img/appbies-bg-dot-left.png), url(../img/appbies-bg-dot-right.png);
+    background-position: left top, right bottom;
+}
+
+.download h2 {
+    margin-bottom: 39px;
+}
+.download p {
+    margin-bottom: 75px;
+	font-size: 1.8rem; line-height: 1.667;
+}
+.download a {
+	display: inline-block;
+    margin-right: 61px;
+	width: 368px; height: 91px; border: 2px solid #fff;
+	color: #fff; font-size: 3rem; line-height: 89px; font-weight: 300;
+	text-align: center;
+}
+.download a:last-child {
+    margin-right: 0;
+}
+.download a:before {
+	content: "";
+	display: inline-block;
+	width: 32px; height: 38px; margin-right: 36px;
+	vertical-align: middle;
+	background: url(../img/appbies-logo-android.png) no-repeat center;
+}
+.download a:last-child:before {
+	background-image: url(../img/appbies-logo-apple.png);
+}
+
+	/* .features */
+
+.features {
+    height: 632px;
+    background: #fff;
+    text-align: center;
+}
+.features > div {
+    width: 1172px;
+    padding-top: 92px;
+    margin: 0 auto;
+}
+.features .box {
+    float: left;
+    width: 498px;
+    margin-top: 14px;
+}
+.features .box h2 {
+	color: #343434;
+    margin-bottom: 53px;
+}
+
+
+.features .box p {
+    float: left;
+    margin-bottom: 40px;
+	color: #585858; font-size: 1.8rem;
+	text-align: center;
+}
+.features .box p:nth-last-of-type(2n) {
+    float: right;
+}
+.features .box p:before {
+	content: "";
+	display: block;
+	width: 98px; height: 98px; margin: 0 auto 14px; border: 2px solid #007ecf; border-radius: 50%;
+	background: url(../img/appbies-icon-costomise.png) no-repeat center;
+}
+.features .box p:nth-child(2):before {
+	background-image: url(../img/appbies-icon-responsive.png);
+}
+.features .box p:nth-child(3):before {
+	background-image: url(../img/appbies-icon-showcase.png);
+}
+.features .box p:nth-child(4):before {
+	background-image: url(../img/appbies-icon-support.png);
+}
+
+.features .phone {
+    float: right;
+    position: relative;
+    width: 488px;
+    height: 510px;
+    margin-right: 34px; 
+}
+.features .phone span {
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 226px;
+    height: 473px;
+    background: url(../img/appbies-obj-phone3.png) no-repeat center/contain;
+}
+.features .phone span:nth-child(2) {
+    left: auto; /* 초기화 코드 */
+    right: 0;
+}
+.features .phone span:nth-child(3) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 244px;
+    height: 510px;
+}
+
+	/* .why */
+.why {
+	background: #008be5;
+    height: 1002px;
+}
+.why div {
+    height: 920px; /* 패딩과 마진 뺀 값 */
+    background: url(../img/appbies-bg-labtop.png) center;
+    padding-top: 179px;
+    margin-top: -50px; /* 패딩때문에 짤려보이는 배경 마진 임의의 수로 당겨줌 */
+    box-sizing: content-box; /* 기본값 */
+}
+.why h2 {
+	color: #fff8f6;
+    margin-bottom: 31px;
+}
+
+.why > div > p {
+	color: #fff8f6; font-size: 1.8rem;
+    text-align: center;
+}
+.why .boxWrap {
+    width: 1172px;
+    margin: 68px auto 0;
+    position: relative;
+}
+.why .box {
+	color: #fff;
+    width: 368px;
+    float: right;
+    margin-top: 16px;
+}
+.why .box h3 {
+	margin-bottom: 25px;
+	font-size: 2rem;
+    text-transform: uppercase;
+}
+.why .box p {
+	font-size: 1.8rem; line-height: 1.667;
+    margin-bottom: 70px;
+}
+.why .box p:last-child {
+    margin-bottom: 0;
+}
+.why .box:first-of-type {
+	text-align: right;
+    float: left;
+}
+.why .phone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    width: 281px;
+    height: 588px;
+    background: url(../img/appbies-obj-phone3.png);
+} 
+
+
+	/* .screenshots */
+.screenshots {
+    height: 954px;
+}
+.screenshots > div {
+    padding-top: 152px;
+}
+.screenshots h2 {
+	color: #4b4b4b;
+    margin-bottom: 55px;
+}
+.screenshots .sliderWrap {
+    position: relative;
+    width: 930px;
+    margin: 0 auto;
+}
+.screenshots .slider {
+    overflow: hidden; /* 중요 까먹지말기 */
+    height: 565px;
+}
+.screenshots .slider div {
+    float: left;
+    width: 270px;
+    height: 100%;
+    margin-left: 60px;
+}
+.screenshots .slider div:first-child {
+    margin-left: 0;
+}
+.screenshots .slider div img {
+    width: 100%;
+}
+.screenshots .sliderWrap button {
+    position: absolute;
+    top: 50%;
+    left: -122px; /* 72px + 여백50px */
+    transform: translateY(-50%);
+    width: 72px;
+    height: 72px;
+    border: 2px solid #007ecf;
+    border-radius: 50%;
+    background: url(../img/appbies-icon-arrow-prev.png) no-repeat center;
+    text-indent: -9999px;
+}
+.screenshots .sliderWrap button:last-child {
+    left: auto; /* 초기화 */
+    right: -122px;
+    background-image: url(../img/appbies-icon-arrow-next.png);
+    
+}
+
+	/* .video */
+.video {
+	background: #007ecf; 
+    height: 871px;
+    overflow: hidden;
+}
+.video div {
+    box-sizing: content-box; /*패딩까지 늘어나게 하겠다 */
+    height: 840px;
+    padding-top: 186px;
+    background: url(../img/appbies-bg-video.png) center;
+    text-align: center;
+    margin-top: -50px;
+    
+}
+.video h2 {
+	color: #fff;
+    margin-bottom: 42px;
+}
+.video iframe {
+    width: 896px;
+    height: 503px;
+    border: none;
+}
+
+	/* .updates */
+.updates {
+    height: 1063px;
+}
+.updates div {
+    width: 1172px;
+    padding-top: 190px;
+    margin: 0 auto;
+}
+
+.updates h2 {
+	color: #333;
+    margin-bottom: 75px;
+}
+.updates .amount {
+    float: left;
+    margin-bottom: 75px;
+}
+.updates .amount p {
+    float: left;
+	width: 167px; height: 166px; 
+    padding-top: 36px;
+    margin-right: 36px;
+    border-radius: 50%;
+	background: #a5c63b; 
+	color: #fff; font-size: 1.8rem; line-height: 1.222;
+	text-align: center;
+}
+.updates .amount p:nth-child(2) {
+    background: #009ddc;
+}
+.updates .amount p:nth-child(3) {
+    background: #f8682c;
+}
+
+.updates .amount p img {
+	display: block;
+	margin: 0 auto 16px;
+}
+.updates .email {
+    float: right;
+    padding-top: 34px;
+	color: #1b1b1b; font-size: 1.8rem;
+}
+.updates .email input {
+    margin: 20px 37px 0 0;
+	width: 400px; height: 44px; border: none; border-bottom: 1px solid #a0a0a0;
+	font-size: 1.5rem;
+}
+.updates .email button {
+	width: 100px; height: 38px; border: 2px solid #5d5d5d;
+	color: #505050; font-size: 1.5rem; font-weight: bold;
+	text-transform: uppercase;
+}
+.updates .phone {
+    clear: both;
+    width: 800px;
+    height: 382px;
+    margin: 0 auto;
+    background: url(../img/appbies-obj-phone4.png)
+}
+
+	/* .support */
+.support {
+	background: #000; /* 임시 */
+	color: #fff;
+}
+.support form span {
+	display: block; position: relative;
+	margin-bottom: 30px;
+}
+.support form label {
+	position: absolute; top: 4px; left: 4px;
+	font-size: 1.8rem;
+}
+.support form input, .support form textarea {
+	width: 371px; height: 40px; /* 임시 */ border: none; border-bottom: 1px solid #fff;
+	background: none;
+	color: #fff; font-size: 1.8em;
+}
+.support form button {
+	width: 100px; height: 38px; border: 2px solid #fff;
+	color: #fff; font-size: 1.5rem; font-weight: bold;
+	text-transform: uppercase;
+}
+.support .contact p {
+	margin-bottom: 70px;
+	font-size: 1.8rem; line-height: 1.667;
+	text-align: center;
+}
+.support .contact p:before {
+	content: "";
+	display: block; height: 31px; margin-bottom: 22px;
+	background: url(../img/appbies-icon-phone.png) no-repeat top center;
+}
+.support .contact p:nth-child(2):before {
+	background-image: url(../img/appbies-icon-mail.png);
+}
+.support .contact p:nth-child(3):before {
+	background-image: url(../img/appbies-icon-location.png);
+}
+.support .chat {
+	text-align: center;
+}
+.support .chat h3 {
+	margin-bottom: 50px;
+	font-size: 3rem;
+}
+.support .chat p {
+	font-size: 1.8rem;
+}
+.support .chat em {
+	display: block;
+	width: 85px; height: 23px; margin: 0 auto 35px; border-radius: 12px;
+	background: #05d10f;
+	font-size: 1.2rem; line-height: 23px; font-style: normal;
+	text-align: center;
+}
+.support .chat button {
+	width: 150px; height: 38px; border: 2px solid #fff;
+	color: #fff; font-size: 1.5rem; font-weight: bold;
+	text-align: center; text-transform: uppercase;
+}
+
+/* footer */
+footer small {
+	color: #2c2c2c; font-size: 1.5rem;
+}
+
+
+
+
+
+

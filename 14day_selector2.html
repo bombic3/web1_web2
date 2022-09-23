@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> p.154 </title>
+	<style>
+		/* 자손과 자식의 차이 */
+        div span { color: red; }
+        div > span { text-decoration: underline; }
+        /* 인접 형제 선택자 */
+        p + span { background: yellow; } /* p 다음에 있는 (형제요소인) span선택 : 실무에서 많이 씀 */
+        li + li { color: red; } /* li 바로 다음 형제 li 선택 */
+        
+        /* 선택자 뒤에 있는 모든 형제 선택 */
+        nav ~ h2 { color: hotpink; } /* nav 바로 다음 형제 중 h2 전부 */
+	</style>
+</head>
+<body>
+	<div>
+	    <b>이 문제는 <span>자손</span>찾기</b>
+	    <p>자손과 자식의 차이</p>
+	    <span>자손과 자식의 차이</span><br>
+	    <span>자손과 자식의 차이</span><br>
+        <span>자손과 자식의 차이</span>
+	</div>
+	
+	<ul>
+	    <li>1</li>
+	    <li>2</li>
+        <li>3</li>
+	</ul>
+	
+	<div>
+	    <h1>동위선택자</h1>
+	    <h2>선택자</h2>
+	    <h2>선택자</h2>
+	    <nav>
+	        <h2>제목</h2>
+	    </nav>
+	    <h2>타이틀</h2>
+        <h2>타이틀</h2>
+	</div>
+</body>
+</html>

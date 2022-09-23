@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> z-index p,74 76 </title>
+	<style>
+        body { margin: 0; padding: 0 }
+        .parent { width: 300px; height: 100px; background: #eee; 
+        position: relative; margin-bottom: 10px; z-index: 1; }
+        .box { width: 200px; height: 130px;
+        border: 1px solid gray; 
+        position: absolute; left: 20px; top: 20px;
+        }
+        .box1 { background: pink; z-index: 10; } /* 나중에 만든 요소 맨앞으로 (양수)
+                                                    뒤로(음수) */
+        .box2 { background: skyblue; z-index: 10;}
+	</style>
+</head>
+<body>
+    <!--나중에 만든 요소 맨앞으로 (양수)
+        뒤로(음수)
+        position fixed 를 제외한 부모에게 position주기
+        부모가 z-index 가 있을 경우 부모 안에서만 의미가 있다.
+        자식에게 큰 수를 주어도 부모 영역을 넘어서지 않는다*/-->
+	<div class="parent">
+     <div class="box box1">box1</div>
+    </div>
+    <div class="parent">
+     <div class="box box2">box2</div>
+    </div>
+</body>
+</html>

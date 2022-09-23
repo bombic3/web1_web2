@@ -1,0 +1,10 @@
+선택자 오류였네요 ^^ ;; 직계자식으로 잡아야합니다! 고생하셨습니다.
+.updates div => .updates > div
+
+아래 코드 참고하세요!
+
+/* .updates */
+.updates {
+height: 1063px;
+}
+.updates > div { width: 1172px; padding-top: 190px; margin: 0 auto; }

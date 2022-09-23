@@ -1,0 +1,100 @@
+@charset "utf-8";
+body {
+    font-family: '맑은고딕', 'apple SD Gothic Neo', sans-serif;
+}
+.hide {
+    position: absolute;
+    left: -9999px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li { list-style: none; }
+li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+ul {
+    width: 1100px;
+    margin: 300px auto;
+    text-align: center;
+}
+ul li {
+    display: inline-block;
+    
+    margin-left: 40px;
+}
+ul li a {
+    display: block; /* 링크범위 넓히기 위해 */
+    width: 100%;
+    color: #001829;
+    font-size: 15px;
+}
+
+
+ul li a:hover {
+    color: #2d4b79;
+    font-weight: bold;
+}
+ul li a:before {
+    display: block;
+    content: '';
+    width: 64px;
+    height: 52px; /* 포토샵에서 확인한 셀렉범위 크기 */
+    margin-bottom: 10px;
+    background: url(../img/sp_com.png) no-repeat;
+}
+/* 포토샵에서 움직여야 할 거리 확인*/
+ul li:nth-child(1) a:before {
+    background-position: -3px -118px;
+}
+ul li:nth-child(2) a:before {
+    background-position: -74px -118px;
+}
+ul li:nth-child(3) a:before {
+    background-position: -147px -118px;
+}
+ul li:nth-child(4) a:before {
+    background-position: -219px -118px;
+}
+ul li:nth-child(5) a:before {
+    background-position: -290px -118px;
+}
+ul li:nth-child(6) a:before {
+    background-position: -364px -118px;
+}
+
+
+
+ul li:nth-child(1) a:hover:before {
+    background-position: -3px -184px;
+}
+ul li:nth-child(2) a:hover:before {
+    background-position: -74px -184px;
+}
+ul li:nth-child(3) a:hover:before {
+    background-position: -147px -184px;
+}
+ul li:nth-child(4) a:hover:before {
+    background-position: -219px -184px;
+}
+ul li:nth-child(5) a:hover:before {
+    background-position: -290px -184px;
+}
+ul li:nth-child(6) a:hover:before {
+    background-position: -364px -184px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 내부링크 </title>	
+		<style>
+			/* reset */
+			a { text-decoration: none; background-color: #ffeb3b; }
+			.wrap { width: 800px; margin: 0 auto; text-align: center;}
+			
+			/* 가운데 정렬위해서는 사이즈가 존재해야 함
+			블럭요소의 가운데 정렬 = width 존재.
+			margin: 0 auto; (상하0 좌우auto를 공백으로 처리) 가운데 정렬 자동으로 됨 */
+			/* %는 부모의 값에 따라 변함 : 유지 보수 편리 */
+			
+			.header { width: 100%; height: 600px; background-color: #67daff;} 
+			.content { width: 100%; height: 600px; background-color: #ff80ab;}
+			.footer { width: 100%; height: 600px; background-color: #6a4f4b;}
+		</style>
+	</head>
+
+	<body>
+	<!-- 내부링크 = # 은 id를 찾으러 간다 (#과 id의 값 동일) -->
+		<div class="wrap">
+			<a href="#content">본문 바로가기</a>
+			<div class="header">header</div>
+			<div class="content" id="content">content</div>
+			<div class="footer">footer</div>
+		</div>
+	</body>
+
+</html>

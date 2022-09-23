@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> radio버튼 커스텀  </title>
+	<style>
+        /*reset*/
+        input { padding: 0; margin: 0;}
+        
+        /*style*/
+        body { line-height: 4;}
+        
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        input[type="search"],
+        input[type="mail"],
+        input[type="tel"] {
+            border: 1px solid #eee;
+            width: 250px;
+            height: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+        <label for="site_search">검색</label><input type="search" name="search" id="site_search"><br>
+        <label for="user_email">이메일 주소</label><input type="mail" name="mail" id="user_email" required><br>
+        <label for="user_tel">전화번호</label><input type="tel" name="tel" id="user_tel"><br>
+        <input type="submit" value="제출"><br>
+        <label>카드<input type="radio" name="pay" value="card" checked></label><br>
+        <label>현금<input type="radio" name="pay" value="chash" disabled></label><br>
+        
+        <button type="submit">전송</button>
+        <button type="reset">취소</button>
+</body>
+</html>

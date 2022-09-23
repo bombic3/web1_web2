@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 가상 요소ex </title>
+	<style>
+		p { font-size: 20px; padding: 0; margin: 0; }
+		h2 { margin: 20px 0; }
+		.nb:after { content: 'new'; display: inline-block; 
+					width: 30px; height: 15px; background: red; color: #fff;
+					font-size: 10px; text-align: center; border-radius: 20px;
+					vertical-align: top; } /* 인라인에서의 수직정렬*/
+		
+	</style>
+</head>
+<body>
+<!-- 가상요소는 인라인이다.
+	선택자 :before, :after 필요
+	content:''; 필수 속성
+	사이즈를 가지려면 display: block; 혹은 
+	inline-block; 으로 변경 후 사이즈를 줄 수 있다
+	vertical-align: top; = 인라인에서의 수직정렬	-->
+	<h2>coffee</h2>
+	<p class="nb">브라질</p>
+	<p>에디오피아</p>
+</body>
+</html>

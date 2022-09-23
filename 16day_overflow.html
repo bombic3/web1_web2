@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> overflow p.140 </title>
+	<style>
+        .box { 
+            background: pink; /* heignt: auto; 설정값을 넣지 않아도 */
+            height: 100px; /* 자식의 크기보다 부모높이가 작을 경우 - 이미지가 찌그러드는 것이 아니라 넘쳐 흐른다 */
+            overflow: auto; /* 
+            scroll; 스크롤만들어짐
+            hidden; 크롭됨
+            >제일 많이 씀 div에 초기코드로 기본으로 많이 사용 (배너등의 이미지에 많이 씀)
+            이미지 비율때문에 가로세로 사이즈 못줘서 div에 사이즈 주고 overflow: hidden; 처리 해 줌 
+            ex.hover시 이미지 약간 커질때 크기그대로에서 이미만 확대대는 것 등등
+            넘치는 영역은 보이지 않게 처리 = 팝업
+            overflow: hidden; = 인접한 요소의 마진 병합 현상의 대응코드로도 사용 
+            auto; 안넘치면 스크롤 안나오고 넘치면 스크롤 나옴 */
+        }
+        .box1  { width: 200px; height: 200px; border: 4px dashed blue; overflow: scroll; }
+         /* 보충설명 */
+        /* img 비율 때문에 img부모에게 정확한 사이즈 주고 overflow: hidden; 적용. img 는 가로값만 100%로 준다.*/
+        .wrap-img{ width: 500px; height: 220px; background: pink; border: 1px solid #fff; overflow: hidden; }
+        .wrap-img img { width: 100%} /* 부모의 영역보다 이미지가 큼 */
+	</style>
+</head>
+<body>
+    <div class="box"> <!-- css에서 div에 overflow: hidden; -->
+        <img src="img/balloon.png" alt="">
+    </div>
+    <div class="box1">
+        <p><!--확장프로그램(콘센트모양)에서 emm치고 다운로드 lorem치고 바로 탭누르기 -->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestias beatae ab quae, laborum. Accusantium dignissimos earum in natus recusandae possimus nisi iure, itaque, exercitationem, magni aliquid minus minima harum.
+        </p>
+    </div>
+<!-- img 사이즈는 고정값 psd
+      img ex.600*100 비율 때문에 img부모에게 정확한 사이즈 주고 img 는 가로값만 100%로 준다.
+   코딩할 때 = img태그를 사용해야 하는 경우 - 관리자가 별도로 있는 이벤트 배너 같은 것에 사용,
+   이미지에게 직접적으로 가로 세로값을 주게 되면 이미지가 비율에 맞지 않으면 찌그러든다(가로, 세로 값중 하난만 넣는다. or width: 100% 하나만 넣는다.)
+   그렇기 때문에 임의의 태그로 감싸서 그 태그에 사이즈를 ㄹ주고 overflow:hidden; 을 필수코드로 넣는다
+   -->
+    <div class="wrap-img">
+        <img src="img/airpods_02.png" alt="에어팟">
+    </div>
+</body>
+</html>

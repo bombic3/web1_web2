@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> iPhone </title>
+	<style>
+		/*reset*/
+        body, h2, p { margin: 0; padding: 0; }
+        ul, li { list-style: none; margin: 0; padding: 0; }
+        a { text-decoration: none; color: inherit; }
+        
+        /*style*/
+        .header { width: 100%; height: 140px; background: #1d1d1f; /* 완전검정 안씀 */
+                    text-align: center; }
+        .header .nav-wrap { width: 100%; height: 44px; }
+        .header ul { width: 1000px; height: 44px; margin: 0 auto; line-height: 44px;}
+        .header ul li { display: inline-block; color: #f5f5f7; font-size: 14px; width: 60px; margin: 0 20px; }
+        .header ul li a { display: inline-block; width: 100% } /* 접근성위해 = 마우스 오버 영역 넓힘 */
+        
+        
+        /* nav img */
+        .header ul li:first-child img,
+        .header ul li:last-child img { width: 12px; vertical-align: middle; }
+        
+        
+        
+        
+        /* .header .p-wrap */
+        .header .p-wrap { width: 100%; height: 96px; background: #fff; }
+        .header p { width: 1000px; height: 100%; color: #1d1d1f; margin: 0 auto; padding: 20px 0; }
+        .header p strong { font-size: 13px; }
+        .header p span { display: block; padding: 16px 0; padding: 1px;}
+        /* 패딩과 마진 보더는 상하단 요소 겹침없이 해야 함 특히 인라인블럭에서 */
+        .header p span a { color: #0066cc; }
+        
+        /* .content1 */
+        .content1 { text-align: center; width: 100%; height: 800px; background: #131313; color: #f5f5f7; padding: 1px; } /* 포폴할때 아예 화이트 아주 블랙 안쓰기 */
+        /* h2의 마진 병합 현상을 위한 대응 코드
+        padding: 1px; 부모에게 준다
+        border: 1px solid transparent;
+        overflow: hidden; */
+        .content1 h2 { font-size: 60px; margin-top: 50px; }
+        .content1 p {font-size: 28px; }
+        .content1 span { display: block; color: #666; font-size: 17px; margin: 10px 0; }/* 실무에서는 <br> 많이 사용 안하고 블럭요소인 태그 쓰거나 태그에 블럭요소를 줌*/
+        .content1 a { color: #2997ff; font-size: 22px; margin: 0 20px; }
+        .content1 img { width: 870px; }
+        
+        
+	</style>
+</head>
+<body>
+    <!-- 인접한 블럭요소의 마진 병합 -->
+	<div class="header">
+	  <div class="nav-wrap">
+          <ul>
+            <li class="logo"><a><img src="img/apple-nav-logo.svg" alt="logo"></a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Search</a></li>
+            <li class="bag"><a><img src="img/apple-nav-bag.svg" alt="bag"></a></li>
+        </ul>
+	  </div>
+	  <div class="p-wrap">
+	    <p>
+	      <strong>대한민국 가로수길이 다시 영업을 시작합니다.</strong>
+	      <span>
+	        다만 모두의 안전을 위해 매장 내에서는 마스크를 착용해 주시고, 매장 수용 인원이 제한 될 수 있는 점 양해 부탁드립니다.<br>
+	        또한 <a href="#">온라인에서 구매</a>하시는 경우 빠른 무료 배송으로 받아보실 수 있습니다.
+	      </span>
+	    </p>
+	  </div>
+	</div>
+    <div class="content1">
+          <h2>iPhone SE</h2>
+          <p>이상적. .<br>
+          \550,000부터.<p>
+          <span>보상판매 시 \380,000부터.<sup>1</sup></span>
+          <a href="#" target="_blank">더 알아보기 &gt;</a>
+          <a href="#" target="_blank">구입하기 &gt;</a>
+          <img src="img/phone_hero.jpg" alt="아이폰SE사진">
+	  </div>
+</body>
+</html>

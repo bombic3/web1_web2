@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 내부링크 복습 </title>
+		<style>
+			/* reset */
+			a { text-decoration: none;  display: block; background-color: yellow;
+				width: 400px; height: 50px; line-height: 50px; text-align: center;
+				border-radius: 20px; margin: 0 auto; }
+			.wrap { width: 800px; margin: 0 auto; text-align: center; }
+			.header { width: 100%; height: 600px; background-color: #ff80ab;}
+			.content { width: 100%; height: 600px; background-color: #00e676;}
+			.footer { width: 100%; height: 600px; background-color: #827717;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<a href="#content">본문 바로가기</a> <br/>
+			<a href="#footer">밑으로 바로 가기</a>
+			<div class="header" >header</div>
+			<div class="content" id="content">content</div>
+			<div class="footer" id="footer">footer</div>
+		</div>
+	</body>
+</html>

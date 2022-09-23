@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 목록태그 p.65 </title>
+	<style>
+		/* reset */
+        ol, ul, li { padding: 0; margin: 0; list-style: none; }
+       /* ol, li { display: inline-block; } 
+        블럭요소의 스타일들은 상속이 안 된다 ol, li 둘 다 줘야 함 */
+        dl, dt, dd { padding: 0; margin: 0; }
+	</style>
+</head>
+<body>
+	<!-- 정열되어야 할 콘텐츠 인가
+    순서가 있는가 : ol
+    특징 : 초기화 할 여백, 스타일, 블럭요소
+    -->
+    <h2> 인기가요 top 3</h2>
+    <ol>
+        <li>아이유 1집</li>
+        <li>BTS</li>
+        <li>마마무</li>
+        <li>등등</li>
+    </ol>
+    <!-- 순서가 없는 목록 : ul-->
+    <h2>메뉴</h2>
+    <ul>
+        <li>아메리카노</li>
+        <li>카페라떼</li>
+        <li>카라멜마끼아또</li>
+        <li>바닐라라떼</li>
+    </ul>
+    <!-- 중첩시 주의사항
+        1. <li>의 바로 하위로 <li>가 바로 올 수 없다. <ul>로 다시 쓰고 <li>를 써야 한다. -->
+    <ul>
+        <li>원두</li>
+        <li>드릭백</li>
+        <li>제품
+            <ul>
+                <li>머그컵</li>
+                <li>텀블러</li>
+                <li>선불카드</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- 정의 목록 -->
+    <dl>
+        <dt>콜롬비아 나리노 수프리모</dt>
+        <dd>부드러운 바닐라 향과 달콤한 오렌지 필의 단맛</dd>
+    </dl>
+</body>
+</html>

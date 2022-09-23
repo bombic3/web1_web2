@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>img - 실전예제</title>
+		<style>
+			.wrap { text-align:center; background-color: #fafafa; padding: 10px;}
+			.wrap h2 img { width:200px;}
+			.wrap div img { width: 350px;}
+			.wrap div { margin-top: 20px;}
+			a { padding: 10px; }
+			p { margin: 20px; }
+			
+		</style>
+	</head>
+	<body>
+	<!-- class명 선택시 복사해서 쓰세요 오타x / 선택시 .태그이름 
+	 공백은 하위 요소 전부를 뜻한다
+	 padding 은 안쪽 여백
+	 글씨버튼은 &nbsp;보다 패딩값으로 거터값 줄 때 많음
+	 margin 너와 나의 거리-->
+		<div class="wrap">
+			<h2><img src="img/apple_logo.png" alt="apple logo" title="WATCH SERIES 5"></h2>
+			<p>새로운 상시표시형 Retina 디스플레이.</p>
+			<a href="#">더 알아보기</a> &nbsp;&nbsp;<!--공백 Entity 꼭 외우기-->
+			<a href="#">구입하기</a>
+			<div>
+				<img src="img/apple_wach.jpg" alt="apple watch" title="apple watch">
+			</div>
+		</div>
+	</body>
+</html>

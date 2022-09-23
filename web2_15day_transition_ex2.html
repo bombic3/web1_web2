@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transition p.98 </title>
+	<style>
+        ul,li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        li {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        
+        /* display: block; 생략 absolute주면 사이즈 줄 수 있음 */
+        span {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            color: #fff;
+            text-align: center;
+            line-height: 300px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            
+            transition: 0.3s;
+        }
+        
+        li:hover span { top: 0; left: 0; }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <img src="img/kpop_01.jpg" alt="">
+                <span>img title</span>
+            </li>
+            <li>
+                <img src="img/kpop_02.jpg" alt="">
+                <span>img title</span>
+            </li>
+            <li>
+                <img src="img/kpop_03.jpg" alt="">
+                <span>img title</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

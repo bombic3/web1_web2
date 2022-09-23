@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table - layout p.47 </title>
+	<style>
+        table { 
+            width: 150px;
+            border: 1px solid red;
+            /* 말줄임 코드! */
+            table-layout: fixed; /* auto가 기본값 = 글자수에 맞게 표가 늘어난다 */
+        }
+        
+        td { 
+            border: 1px solid blue;
+            /*말줄임 코드 세개 암기! */
+            overflow: hidden;
+            white-space: nowrap; /* 다음줄 개행 방지(줄바꿈 일어나지 않음) */
+            text-overflow: ellipsis; /* ...표기 */ 
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>ed</td>
+            <td>wood</td>
+        </tr>
+        <tr>
+            <td>albert</td>
+            <td>가나다라마바사아자차카</td>
+        </tr>
+        <tr>
+            <td>jane</td>
+            <td>fonda</td>
+        </tr>
+    </table>
+</body>
+</html>

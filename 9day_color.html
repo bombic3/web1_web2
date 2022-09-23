@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 색상 값 지정 방식 </title>
+	<style>
+		.color1 { color: red; } /* color name */
+		.color2 { color: #ff0000; } /* hexadecimal color */
+		.color3 { color: #f00; }
+		.color4 { color: rgb(255,0,0); } /* 3가지 값 = red, green, blue 색상값쓸 때 ()끼리 띄어쓰기x, 마감; 잘 붙이기 */
+		.color5 { color: rgba(255,0,0,1);} /* 4가지 값 = red, green, blue, alpha */
+		.color6 { color: hsl(0,100%,50%);} /* hue(색조) saturation(채도) lightness(명도) */
+	</style>
+</head>
+<body>
+<!-- 모두 동일한 적색 값 표현 방법
+	색상값쓸 때 ()끼리 띄어쓰기x, 마감; 잘 붙이기-->
+	<div class="color1">color</div>
+	<div class="color2">color</div>
+	<div class="color3">color</div>
+	<div class="color4">color</div>
+	<div class="color5">color</div>
+	<div class="color6">color</div>	</body>
+</html>

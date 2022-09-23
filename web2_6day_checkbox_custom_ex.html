@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> 체크박스 커스텀  </title>
+	<style>
+        body { padding: 50px; }
+        .checkbox input, 
+        .checkbox2 input
+        {
+            position: absolute; 
+            left: -9999px;
+        }
+        .checkbox label {
+            display: inline-block;
+            width: 35px;
+            height: 21px;
+            border-radius: 10px;
+            background: #777;
+            color: transparent; /* 접근성의 문제로 안보이게 하더라도 글자는 넣어줘야 함*/
+            position: relative;
+            overflow: hidden;
+        }
+        .checkbox label:before {
+            content: '';
+            /*display: block;  position: absolute;주면 자동으로 블럭됨. 안써도 됨*/
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        /* 실제 선택자 자체는 input이고 레이블이 checked되는게 아님
+            선택자 = 나 말고 다른에 2가지
+            나말고 다음 요소 +
+            나말고 전부 ~ */
+        .checkbox input:checked + label {
+            background: hotpink;
+        }
+        
+        /* 선택했을 때 가상요소 옮기기 */
+        .checkbox input:checked + label:before  {
+            content: '';
+            /*display: block;  position: absolute;주면 자동으로 블럭됨. 안써도 됨*/
+            position: absolute;
+            left: auto; /* 초기화 값 줘야 함 */
+            right: 1px;
+            top: 1px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        /* 이미지 */
+        .checkbox2 label:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 2px 5px;
+            background: url(img/checkbox_off.png) no-repeat 0 0;
+            background-size: 20px; 
+            vertical-align: bottom;
+        }
+        
+        .checkbox2 input:checked + label:before {
+            background: url(img/checkbox_on.png) no-repeat;
+            background-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 실제 db값을 넘겨줘야하기 때문에 label + input으로 코드를 만든다
+    강의에서는 input 과 textarea들은 임의의 태그로 감싸주었다.
+    이는 개발자의 선택사항이지만 각 input 에 클래스를 넣어서 css를 넣어 코드를 컨트롤 하는 것 보다는 좀 더 유연한 디자인 적용이 가능하기 때문에 폼요소 자체의 디자인은 지우고 겉에 디자인만 관장하는 태그를 만들어 주었다.
+    input 을 기본 형태로 쓰는 경우는 없기 때문에 많이 사용하는 방법으로 준비함.-->
+    
+    <h1> 체크박스 </h1>
+    <div class="checkbox">
+        <input type="checkbox" id="check1">
+        <label for="check1">선택1</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="check2">
+        <label for="check2">선택2</label>
+    </div>
+    
+    <!-- 이미지 커스텀 -->
+    <h1> 체크박스 </h1>
+    <div class="checkbox2">
+        <input type="checkbox" id="check3">
+        <label for="check3">발레</label>
+    </div>
+    <div class="checkbox2">
+        <input type="checkbox" id="check4">
+        <label for="check4">축구</label>
+    </div>
+</body>
+</html>

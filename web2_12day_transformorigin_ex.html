@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> transform p.84 </title>
+	<style>
+        body { margin: 0; padding: 0; }
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background: #eee;
+            cursor: pointer;
+            margin: 300px;
+        }
+        
+        .box1 { position: relative; }
+        .box2 { position: absolute;
+                left: 0; top: 0;}
+       
+        
+        .box2 { 
+            background: hotpink;
+            transition: 0.3s;
+            transform-origin: 50% 0; 
+        }
+        .box2:hover  {
+            transform: rotate(360deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1"><a href="#"></a></div>
+    <div class="box2"></div>
+</body>
+</html>

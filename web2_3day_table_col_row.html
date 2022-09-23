@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> table - 셀병합 p.35 </title>
+	<style>
+        table { border-collapse: collapse; } /* reset 코드 = 보더 겹치지 않고 한 줄로 표현 */
+        th, td { border: 1px solid grey; padding: 20px;}     
+    </style>
+</head>
+<body>
+  <!-- 1. 모든 칸과 줄 만들기
+      2. 병합 부분 비워두고 내용 채우기
+      3. 합치고 비운 표는 지우기 -->
+   <table>
+       <tr>
+           <th colspan="4">Tempertature</th>
+       </tr>
+       <tr>
+           <th>Month</th>
+           <th>High</th>
+           <th>Low</th>
+           <th>Average</th>
+       </tr>
+       <tr>
+           <td>January</td>
+           <td>48</td>
+           <td>37</td>
+           <td>43</td>
+       </tr>
+       <tr>
+           <td>February</td>
+           <td>49</td>
+           <td>37</td>
+           <td rowspan="2">43</td>
+       </tr>
+       <tr>
+           <td>March</td>
+           <td>52</td>
+           <td>39</td>
+       </tr>
+       <tr>
+           <td>April</td>
+           <td>58</td>
+           <td>43</td>
+           <td>37</td>
+       </tr>
+   </table>
+</body>
+</html>

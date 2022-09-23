@@ -1,0 +1,228 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {font-size: 0.625em;}
+body {font-family: Lato, sans-serif; line-height: 1;}
+ul {list-style-type: none;}
+a {text-decoration: none;}
+button {border: none; background: none;}
+.blind {position: absolute; top: -9999px; left: -9999px;}
+
+/* header */
+header {
+	background: url(../img/appbies-bg-visual.jpg) no-repeat center/cover;
+}
+header nav a {
+	color: #fff; font-size: 1.5rem; 
+	text-transform: uppercase;
+}
+header .visual {
+	color: #fff;
+}
+header .visual b {
+	font-size: 4.7rem; line-height: 1.277; font-weight: normal;
+}
+header .visual p {
+	font-size: 1.8rem; line-height: 1.667;
+}
+header .visual a {
+	display: block;
+	width: 238px; height: 59px; border: 2px solid #fff;
+	color: #fff; font-size: 2rem; line-height: 57px; font-weight: 300;
+	text-align: center;
+}
+
+/* main */
+section h2 {
+	font-size: 4.7rem; font-weight: 300;
+	text-align: center;
+}
+
+	/* .download */
+.download {
+	background: #000; /* 임시 */
+	color: #fff8f6;
+}
+.download p {
+	font-size: 1.8rem; line-height: 1.667;
+	text-align: center;
+}
+.download a {
+	display: inline-block;
+	width: 368px; height: 91px; border: 2px solid #fff;
+	color: #fff; font-size: 3rem; line-height: 89px; font-weight: 300;
+	text-align: center;
+}
+.download a:before {
+	content: "";
+	display: inline-block;
+	width: 32px; height: 38px; margin-right: 36px;
+	vertical-align: middle;
+	background: url(../img/appbies-logo-android.png) no-repeat center;
+}
+.download a:last-child:before {
+	background-image: url(../img/appbies-logo-apple.png);
+}
+
+	/* .features */
+.features h2 {
+	color: #343434;
+}
+.features .box p {
+	color: #585858; font-size: 1.8rem;
+	text-align: center;
+}
+.features .box p:before {
+	content: "";
+	display: block;
+	width: 98px; height: 98px; margin: 0 auto 14px; border: 2px solid #007ecf; border-radius: 50%;
+	background: url(../img/appbies-icon-costomise.png) no-repeat center;
+}
+.features .box p:nth-child(2):before {
+	background-image: url(../img/appbies-icon-responsive.png);
+}
+.features .box p:nth-child(3):before {
+	background-image: url(../img/appbies-icon-showcase.png);
+}
+.features .box p:nth-child(4):before {
+	background-image: url(../img/appbies-icon-support.png);
+}
+
+	/* .why */
+.why {
+	background: #000; /* 임시 */
+}
+.why h2 {
+	color: #fff8f6;
+}
+.why > div > p {
+	color: #fff8f6; font-size: 1.8rem;
+}
+.why .box {
+	color: #fff;
+}
+.why .box h3 {
+	margin-bottom: 25px;
+	font-size: 2rem;
+}
+.why .box p {
+	font-size: 1.8rem; line-height: 1.667;
+}
+.why .box:first-of-type {
+	text-align: right;
+}
+
+	/* .screenshots */
+.screenshots h2 {
+	color: #4b4b4b;
+}
+
+	/* .video */
+.video {
+	background: #000; /* 임시 */
+}
+.video h2 {
+	color: #fff;
+}
+
+	/* .updates */
+.updates h2 {
+	color: #333;
+}
+.updates .amount p {
+	width: 167px; height: 166px; border-radius: 50%;
+	background: #000; /* 임시 */
+	color: #fff; font-size: 1.8rem; line-height: 1.222;
+	text-align: center;
+}
+.updates .amount p img {
+	display: block;
+	margin: 0 auto 16px;
+}
+.updates .email {
+	color: #1b1b1b; font-size: 1.8rem;
+}
+.updates .email input {
+	width: 400px; height: 38px; border: none; border-bottom: 1px solid #a0a0a0;
+	font-size: 1.5rem;
+}
+.updates .email button {
+	width: 100px; height: 38px; border: 2px solid #5d5d5d;
+	color: #505050; font-size: 1.5rem; font-weight: bold;
+	text-transform: uppercase;
+}
+
+	/* .support */
+.support {
+	background: #000; /* 임시 */
+	color: #fff;
+}
+.support form span {
+	display: block; position: relative;
+	margin-bottom: 30px;
+}
+.support form label {
+	position: absolute; top: 4px; left: 4px;
+	font-size: 1.8rem;
+}
+.support form input, .support form textarea {
+	width: 371px; height: 40px; /* 임시 */ border: none; border-bottom: 1px solid #fff;
+	background: none;
+	color: #fff; font-size: 1.8em;
+}
+.support form button {
+	width: 100px; height: 38px; border: 2px solid #fff;
+	color: #fff; font-size: 1.5rem; font-weight: bold;
+	text-transform: uppercase;
+}
+.support .contact p {
+	margin-bottom: 70px;
+	font-size: 1.8rem; line-height: 1.667;
+	text-align: center;
+}
+.support .contact p:before {
+	content: "";
+	display: block; height: 31px; margin-bottom: 22px;
+	background: url(../img/appbies-icon-phone.png) no-repeat top center;
+}
+.support .contact p:nth-child(2):before {
+	background-image: url(../img/appbies-icon-mail.png);
+}
+.support .contact p:nth-child(3):before {
+	background-image: url(../img/appbies-icon-location.png);
+}
+.support .chat {
+	text-align: center;
+}
+.support .chat h3 {
+	margin-bottom: 50px;
+	font-size: 3rem;
+}
+.support .chat p {
+	font-size: 1.8rem;
+}
+.support .chat em {
+	display: block;
+	width: 85px; height: 23px; margin: 0 auto 35px; border-radius: 12px;
+	background: #05d10f;
+	font-size: 1.2rem; line-height: 23px; font-style: normal;
+	text-align: center;
+}
+.support .chat button {
+	width: 150px; height: 38px; border: 2px solid #fff;
+	color: #fff; font-size: 1.5rem; font-weight: bold;
+	text-align: center; text-transform: uppercase;
+}
+
+/* footer */
+footer small {
+	color: #2c2c2c; font-size: 1.5rem;
+}
+
+
+
+
+
+
